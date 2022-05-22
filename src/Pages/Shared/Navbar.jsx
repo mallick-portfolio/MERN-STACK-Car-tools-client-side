@@ -2,8 +2,11 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { NavLink } from "react-router-dom";
 import auth from "../../firebase.init.js";
-
+import { signOut } from "firebase/auth";
 const Navbar = () => {
+  const logout = () => {
+    signOut(auth);
+  };
   const [user] = useAuthState(auth);
   const menus = (
     <>
@@ -58,35 +61,37 @@ const Navbar = () => {
         </div>
         <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
       </div>
-      <div class="navbar-center hidden lg:flex">
+      <div class={`${user ? "navbar-center" : "navbar-end"} hidden lg:flex`}>
         <ul class="menu menu-horizontal p-0">{menus}</ul>
       </div>
-      <div class="navbar-end">
-        <div class="dropdown dropdown-end">
-          <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-            <div class="w-10 rounded-full">
-              <img src="https://api.lorem.space/image/face?hash=33791" />
-            </div>
-          </label>
-          <ul
-            tabindex="0"
-            class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box  w-52 md:w-72"
-          >
-            <li>
-              <a class="justify-between">
-                Profile
-                <span class="badge">New</span>
-              </a>
-            </li>
-            <li>
-              <a>Settings</a>
-            </li>
-            <li>
-              <a>Logout</a>
-            </li>
-          </ul>
+      {user && (
+        <div class="navbar-end">
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img src="https://api.lorem.space/image/face?hash=33791" />
+              </div>
+            </label>
+            <ul
+              tabindex="0"
+              class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box  w-52 md:w-72"
+            >
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li>
+                <a>Settings</a>
+              </li>
+              <li>
+                <button onClick={logout}>Logout</button>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
