@@ -74,7 +74,7 @@ const Banner = () => {
               <div>
                 <img src={item.img} alt="" />
               </div>
-              <div class="absolute top-1/2 -translate-y-1/2 l-0 w-1/2 lg:pl-16 md:pl-16 sm:pl-16 pl-2 text-neutral">
+              <div class="absolute top-1/2 -translate-y-1/2 l-0 w-1/2 lg:pl-24 md:pl-24 sm:pl-16 pl-2 text-neutral">
                 <h2 className="text-sm sm:text-xl md:text-2xl lg:text-3xl">{item.subtitle}</h2>
                 <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl sm:my-1 md:my-2 lg:my-4 ">
                   {item.headtitle}

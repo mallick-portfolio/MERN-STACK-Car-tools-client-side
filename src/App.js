@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Register from "./Pages/Login/Register.jsx";
 import { useEffect, useState } from "react";
 import { themeChange } from "theme-change";
+import PageNotFound from "./Pages/Shared/PageNotFound.jsx";
 function App() {
   const [theme, setTheme] = useState(true);
   useEffect(() => {
@@ -26,6 +27,10 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Register />} />
+
+
+        {/* 404 page */}
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
 
       <ToastContainer />
