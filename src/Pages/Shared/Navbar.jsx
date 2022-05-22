@@ -1,19 +1,36 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { NavLink } from "react-router-dom";
+import auth from "../../firebase.init.js";
 
 const Navbar = () => {
+  const [user] = useAuthState(auth);
   const menus = (
     <>
       <li>
-        <a>Item 1</a>
+        <NavLink to={"/"}>Home</NavLink>
       </li>
-
       <li>
-        <a>Item 3</a>
+        <a>About</a>
       </li>
+      <li>
+        <a>About</a>
+      </li>
+      <li>
+        <a>About</a>
+      </li>
+      <li>
+        <a>About</a>
+      </li>
+      {!user && (
+        <li>
+          <NavLink to={"/login"}>Login</NavLink>
+        </li>
+      )}
     </>
   );
   return (
-    <div class="navbar bg-base-100 bg-primary lg:px-12 md:px-6 px-2 mx-auto">
+    <div class="navbar bg-base-100 lg:px-12 md:px-6 px-2 mx-auto">
       <div class="navbar-start">
         <div class="dropdown">
           <label tabindex="0" class="btn btn-ghost lg:hidden">
