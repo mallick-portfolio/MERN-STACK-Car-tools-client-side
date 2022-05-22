@@ -5,9 +5,11 @@ import Login from "./Pages/Login/Login.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Register from "./Pages/Login/Register.jsx";
+import { useState } from "react";
 function App() {
+  const [loading, setLoading] = useState(true)
   return (
-    <div>
+    <div className="overflow-hidden">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
