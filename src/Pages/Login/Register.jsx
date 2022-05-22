@@ -133,7 +133,7 @@ const Register = () => {
           </div>
           <div className="mb-1 text-center">
             <p>
-              Already Have an Account {""}
+              Already Have an Account
               <Link to={"/login"} className="text-secondary cursor-pointer">
                 Login Now
               </Link>

@@ -95,7 +95,7 @@ const Login = () => {
           </div>
           <div className="mb-2 text-center">
             <p>
-              New to Doctors Portal?{" "}
+              New to Village Garden?{" "}
               <Link to={"/register"} className="text-secondary cursor-pointer">
                 Register
               </Link>
