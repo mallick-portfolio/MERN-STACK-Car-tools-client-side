@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import auth from "../../firebase.init.js";
 import { signOut } from "firebase/auth";
 import userImg from "../../assets/images/user.jpg";
-const Navbar = () => {
+const Navbar = ({ setTheme, theme }) => {
   const [showProfile, setShowProfile] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const logout = () => {
@@ -69,7 +69,9 @@ const Navbar = () => {
             {menus}
           </ul>
         </div>
-        <Link to={"/"} class="btn btn-ghost normal-case text-xl">GHome</Link>
+        <Link to={"/"} class="btn btn-ghost normal-case text-xl">
+          GHome
+        </Link>
       </div>
       <div class={`${user ? "navbar-center" : "navbar-end"} hidden lg:flex`}>
         <ul class="menu menu-horizontal p-0">{menus}</ul>
@@ -109,11 +111,17 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li>
-                  <a>Settings</a>
+                  <button onClick={() => {
+                    setTheme(!theme)
+                    localStorage.setItem('theme', JSON.stringify(!theme))
+                  }}>
+                    {theme ? "Go Dark" : "Go Light"}
+                  </button>
                 </li>
                 <li>
                   <button onClick={logout}>Logout</button>
                 </li>
+                <li></li>
               </ul>
             </div>
           </div>

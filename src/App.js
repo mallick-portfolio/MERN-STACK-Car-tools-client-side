@@ -5,12 +5,22 @@ import Login from "./Pages/Login/Login.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Register from "./Pages/Login/Register.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { themeChange } from "theme-change";
 function App() {
-  const [loading, setLoading] = useState(true)
+  const [theme, setTheme] = useState(true);
+  useEffect(() => {
+    themeChange(false);
+  }, []);
+  useEffect(() => {
+    const theme = JSON.parse(localStorage.getItem("theme"));
+    
+    setTheme(theme);
+    console.log(theme)
+  }, []);
   return (
-    <div className="overflow-hidden">
-      <Navbar />
+    <div className="overflow-hidden" data-theme={`${theme ? "light" : "dark"}`}>
+      <Navbar theme={theme} setTheme={setTheme} />
       <Routes>
         <Route path="/" element={<Home />} />
 
