@@ -88,10 +88,10 @@ const Banner = () => {
             </div>
           </SwiperSlide>
         ))}
-        <div className="prev text-center text-secondary leading-relaxed sm:leading-10 text-xl sm:text-2xl absolute top-1/2 left-4 -translate-y-1/2 z-10 rounded-full w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 border-2 border-secondary cursor-pointer hover:ring hover:ring-offset-2 duration-500 ring-secondary">
+        <div className="prev hidden sm:block text-center text-secondary leading-relaxed sm:leading-10 text-xl sm:text-2xl absolute top-1/2 left-4 -translate-y-1/2 z-10 rounded-full w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 border-2 border-secondary cursor-pointer hover:ring hover:ring-offset-2 duration-500 ring-secondary">
           <FontAwesomeIcon icon={faArrowLeft} />
         </div>
-        <div className="next text-center text-secondary leading-relaxed sm:leading-10 text-xl sm:text-2xl absolute top-1/2 right-4 -translate-y-1/2 z-10 rounded-full w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 border-2 border-secondary cursor-pointer hover:ring hover:ring-offset-2 duration-500 ring-secondary">
+        <div className="next  hidden sm:block text-center text-secondary leading-relaxed sm:leading-10 text-xl sm:text-2xl absolute top-1/2 right-4 -translate-y-1/2 z-10 rounded-full w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 border-2 border-secondary cursor-pointer hover:ring hover:ring-offset-2 duration-500 ring-secondary">
           <FontAwesomeIcon icon={faArrowRight} />
         </div>
       </Swiper>

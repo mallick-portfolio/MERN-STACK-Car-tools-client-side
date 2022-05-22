@@ -115,13 +115,12 @@ const Navbar = ({ setTheme, theme }) => {
                     setTheme(!theme)
                     localStorage.setItem('theme', JSON.stringify(!theme))
                   }}>
-                    {theme ? "Go Dark" : "Go Light"}
+                    {theme ? "Go to Dark" : "Go to Light"}
                   </button>
                 </li>
                 <li>
                   <button onClick={logout}>Logout</button>
                 </li>
-                <li></li>
               </ul>
             </div>
           </div>
