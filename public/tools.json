@@ -6,7 +6,8 @@
     "des": "For over 25 years, our garden carts have been a beloved tool of gardeners everywhere. That’s because they were designed specifically to meet the needs of gardeners, not adapted from an industrial utility cart. The big pneumatic wheels roll easily over rough terrain. High sides prevent loose loads like mulch and compost from bouncing out.",
     "minQty": 100,
     "avilQty": 2500,
-    "singlePrice": 99
+    "singlePrice": 99,
+    "rating": 2.5
   },
   {
     "_id": 2,
@@ -15,7 +16,8 @@
     "des": "For over 25 years, our garden carts have been a beloved tool of gardeners everywhere. That’s because they were designed specifically to meet the needs of gardeners, not adapted from an industrial utility cart. This garden cart has big wheels with pneumatic tires that roll easily over rough terrain. High sides prevent loose loads like mulch and compost from bouncing out.",
     "minQty": 100,
     "avilQty": 2500,
-    "singlePrice": 99
+    "singlePrice": 99,
+    "rating": 2.5
   },
   {
     "_id": 3,
@@ -24,7 +26,8 @@
     "des": "Also called a swan-neck hoe, this popular tool cuts weeds just below the soil surface. The ergonomic design lets you stand up straight while working, minimizing back strain, and the curved blade lets you work in tight spaces between plants and rows. To give it extra strength and durability.",
     "minQty": 100,
     "avilQty": 2500,
-    "singlePrice": 99
+    "singlePrice": 99,
+    "rating": 2.5
   },
   {
     "_id": 4,
@@ -33,7 +36,8 @@
     "des": "Thanks to its center-mounted wheels, this rugged wheelbarrow is stable and easy to maneuver, even when hauling loads up to 300 lbs. Its unique design allows the front to tip all the way to the ground while the wheels stay put.",
     "minQty": 100,
     "avilQty": 2500,
-    "singlePrice": 99
+    "singlePrice": 99,
+    "rating": 2.5
   },
   {
     "_id": 5,
@@ -42,7 +46,8 @@
     "des": "This convenient tote is the perfect grab-and-go bag for a quick weeding session or a full day in the garden. You'll have the right tool, at the right time, right at your side. Enjoy your time in the garden — instead of running back and forth to the shed for the seeds or trowel, or whatever else you forgot!",
     "minQty": 100,
     "avilQty": 2500,
-    "singlePrice": 99
+    "singlePrice": 99,
+    "rating": 5
   },
   {
     "_id": 6,
@@ -51,7 +56,8 @@
     "des": "Keep your go-to gardening hand tools where it makes the most sense — right where you use them! Oversize storage box is made from galvanized steel for rust resistance and durability, and the smart design keeps water from getting in and ruining your tools.",
     "minQty": 100,
     "avilQty": 2500,
-    "singlePrice": 99
+    "singlePrice": 99,
+    "rating": 4.5
   },
   {
     "_id": 7,
@@ -60,7 +66,8 @@
     "des": "An original Japanese design, this multipurpose knife is an indispensable tool in your gardening arsenal. Dig, weed, saw, split — you name it the Hori Hori can do it. You'll wonder how you ever got along without it!",
     "minQty": 100,
     "avilQty": 2500,
-    "singlePrice": 99
+    "singlePrice": 99,
+    "rating": 3
   },
   {
     "_id": 8,
@@ -69,6 +76,7 @@
     "des": "Our staff gardeners love these compact snips. The ergonomic, non-slip grip and narrow, super-sharp blades let you make precision cuts without damaging nearby stems. Perfect for harvesting herbs, flowers, fruits",
     "minQty": 100,
     "avilQty": 2500,
-    "singlePrice": 99
+    "singlePrice": 99,
+    "rating": 4.5
   }
 ]

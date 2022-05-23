@@ -33,7 +33,7 @@ const Summary = () => {
   ];
   return (
     <div className="lg:px-16 py-16 bg-base-100 mx-auto text-accent">
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 px-16 mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:px-16 px-4 mx-auto">
         {summarys.map((summary) => (
           <SummaryCard key={summary._id} summary={summary} />
         ))}
