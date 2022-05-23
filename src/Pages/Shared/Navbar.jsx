@@ -106,7 +106,7 @@ const Navbar = ({ setTheme, theme }) => {
               <ul tabindex="0">
                 <li>
                   <a class="justify-between">
-                    Profile
+                    Dashboard
                     <span class="badge">New</span>
                   </a>
                 </li>
