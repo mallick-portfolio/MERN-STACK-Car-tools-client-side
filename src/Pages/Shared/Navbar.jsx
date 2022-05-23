@@ -18,7 +18,7 @@ const Navbar = ({ setTheme, theme }) => {
         <NavLink to={"/"}>Home</NavLink>
       </li>
       <li>
-        <a>About</a>
+        <NavLink to={"/shop"}>Shop</NavLink>
       </li>
       <li>
         <a>About</a>

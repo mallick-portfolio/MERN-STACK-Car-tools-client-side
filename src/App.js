@@ -10,6 +10,7 @@ import { themeChange } from "theme-change";
 import PageNotFound from "./Pages/Shared/PageNotFound.jsx";
 import ToolsDetails from "./Pages/Shared/ToolsDetails.jsx";
 import RequireAuth from "./Pages/Login/RequireAuth.jsx";
+import Shop from './Pages/Shop/Shop.jsx'
 function App() {
   const [theme, setTheme] = useState(true);
   useEffect(() => {
@@ -25,6 +26,7 @@ function App() {
       <Navbar theme={theme} setTheme={setTheme} />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
 
         {/* protected route start */}
         <Route
