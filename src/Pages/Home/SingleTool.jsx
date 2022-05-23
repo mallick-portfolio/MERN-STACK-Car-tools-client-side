@@ -5,7 +5,7 @@ import Commonbtn from "../Shared/Commonbtn.jsx";
 const SingleTool = ({ tool }) => {
   const { name, image, minQty, des, avilQty, singlePrice, _id } = tool;
   return (
-    <div class="card bg-base-300 shadow-xl text-accent">
+    <div className="card bg-base-300 shadow-xl text-accent">
       <figure>
         <img
           className="sm:h-52 max-w-sm px-5 pt-4 w-screen"
@@ -13,10 +13,10 @@ const SingleTool = ({ tool }) => {
           alt="Shoes"
         />
       </figure>
-      <div class="card-body">
-        <h2 class="card-title">{name}</h2>
+      <div className="card-body">
+        <h2 className="card-title">{name}</h2>
         <p className="text-xl font-bold">${singlePrice}</p>
-        <div class="card-actions py-0 my-0">
+        <div className="card-actions py-0 my-0">
           <div>
             <p className="text-sm font-bold">
               Minimum order quantity <span className="font-bold">{minQty}</span>

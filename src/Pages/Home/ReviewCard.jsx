@@ -2,7 +2,6 @@ import React from "react";
 import StarRatings from "react-star-ratings";
 
 const ReviewCard = ({ review }) => {
-  console.log(review.rating);
   return (
     <div className="card sm:p-4 card-compact text-accent w-auto bg-base-300 shadow-xl">
       <div className="card-body">
