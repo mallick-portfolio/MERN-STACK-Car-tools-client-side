@@ -2,7 +2,6 @@ import React from "react";
 import Commonbtn from "../Shared/Commonbtn.jsx";
 
 const SingleTool = ({ tool }) => {
-  console.log(tool);
   const { name, image, minQty, des, avilQty, singlePrice } = tool;
   return (
     <div class="card bg-base-300 shadow-xl text-accent">
