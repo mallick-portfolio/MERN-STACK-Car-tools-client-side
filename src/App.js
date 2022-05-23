@@ -17,7 +17,6 @@ function App() {
     const theme = JSON.parse(localStorage.getItem("theme"));
     
     setTheme(theme);
-    console.log(theme)
   }, []);
   return (
     <div className="overflow-hidden" data-theme={`${theme ? "light" : "dark"}`}>

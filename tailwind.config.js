@@ -8,17 +8,23 @@ module.exports = {
       {
         mytheme: {
           ...require("daisyui/src/colors/themes")["[data-theme=light]"],
-          primary: "#0FCFEC",
-          secondary: "#19D3AE",
-          accent: "#3A4256",
-          neutral: "#3d4451",
+          primary: "#6047ec",
+          secondary: "#6047ec",
+          accent: "#000000",
+          neutral: "#ff136f",
+          "info": "#000",
           "base-100": "#ffffff",
         },
       },
       {
         dark: {
           ...require("daisyui/src/colors/themes")["[data-theme=dark]"],
+          primary: "#1e2b47",
+          secondary: "#1e2b47",
           accent: "#fff",
+          neutral: "#ff136f",
+          "info": "#000",
+          "base-100": "#090a27",
         },
       },
       "cupcake",

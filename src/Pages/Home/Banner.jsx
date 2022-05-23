@@ -1,9 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowLeft,
-  faArrowRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper";
 import "swiper/css";
@@ -63,19 +60,21 @@ const Banner = () => {
           prevEl: ".prev",
           nextEl: ".next",
         }}
-        loop= {true}
+        loop={true}
         pagination={true}
         modules={[Pagination, Autoplay, Navigation]}
         className="mySwiper"
       >
         {items.map((item) => (
           <SwiperSlide key={item._id}>
-            <div className="relative">
+            <div className="relative text-info">
               <div>
                 <img src={item.img} alt="" />
               </div>
-              <div class="absolute top-1/2 -translate-y-1/2 l-0 w-1/2 lg:pl-24 md:pl-24 sm:pl-16 pl-2 text-neutral">
-                <h2 className="text-sm sm:text-xl md:text-2xl lg:text-3xl">{item.subtitle}</h2>
+              <div class="absolute top-1/2 -translate-y-1/2 l-0 w-1/2 lg:pl-24 md:pl-24 sm:pl-16 pl-2">
+                <h2 className="text-sm sm:text-xl md:text-2xl lg:text-3xl">
+                  {item.subtitle}
+                </h2>
                 <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl sm:my-1 md:my-2 lg:my-4 ">
                   {item.headtitle}
                   <br />
