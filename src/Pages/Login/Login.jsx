@@ -26,7 +26,7 @@ const Login = () => {
   let from = location.state?.from?.pathname || "/";
   useEffect(() => {
     if (error || gerror) {
-      toast("Your Login Failed. Please try again");
+      toast("Your email or passowrd is not correct. Please try again");
       return navigate("/login");
     }
   }, [error, gerror, navigate]);
@@ -96,7 +96,7 @@ const Login = () => {
           <div className="mb-2 text-center">
             <p>
               New to Village Garden?{" "}
-              <Link to={"/register"} className="text-secondary cursor-pointer">
+              <Link to={"/signup"} className="text-secondary cursor-pointer">
                 Register
               </Link>
             </p>

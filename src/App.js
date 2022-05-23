@@ -8,6 +8,8 @@ import Register from "./Pages/Login/Register.jsx";
 import { useEffect, useState } from "react";
 import { themeChange } from "theme-change";
 import PageNotFound from "./Pages/Shared/PageNotFound.jsx";
+import ToolsDetails from "./Pages/Shared/ToolsDetails.jsx";
+import RequireAuth from "./Pages/Login/RequireAuth.jsx";
 function App() {
   const [theme, setTheme] = useState(true);
   useEffect(() => {
@@ -15,7 +17,7 @@ function App() {
   }, []);
   useEffect(() => {
     const theme = JSON.parse(localStorage.getItem("theme"));
-    
+
     setTheme(theme);
   }, []);
   return (
@@ -24,9 +26,19 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
 
+        {/* protected route start */}
+        <Route
+          path="/tool-details/:id"
+          element={
+            <RequireAuth>
+              <ToolsDetails />
+            </RequireAuth>
+          }
+        />
+        {/* protected route end */}
+
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Register />} />
-
 
         {/* 404 page */}
         <Route path="*" element={<PageNotFound />} />

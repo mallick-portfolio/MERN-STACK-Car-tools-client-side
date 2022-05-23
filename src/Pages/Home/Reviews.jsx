@@ -57,7 +57,7 @@ const Reviews = () => {
   ];
   return (
     <section className="container lg:py-20">
-      <SectionTitle title={"Our User Reviews"} />
+      <SectionTitle title={"Our Realer Reviews"} />
       <Swiper
         effect={"coverflow"}
         grabCursor={true}

@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Commonbtn from "../Shared/Commonbtn.jsx";
 
 const SingleTool = ({ tool }) => {
-  const { name, image, minQty, des, avilQty, singlePrice } = tool;
+  const { name, image, minQty, des, avilQty, singlePrice, _id } = tool;
   return (
     <div class="card bg-base-300 shadow-xl text-accent">
       <figure>
@@ -18,8 +19,7 @@ const SingleTool = ({ tool }) => {
         <div class="card-actions py-0 my-0">
           <div>
             <p className="text-sm font-bold">
-              Minimum order quantity{" "}
-              <span className="font-bold">{minQty}</span>
+              Minimum order quantity <span className="font-bold">{minQty}</span>
             </p>
             <p className="text-sm font-bold">
               Available quantity{" "}
@@ -28,7 +28,9 @@ const SingleTool = ({ tool }) => {
             <p title={des}>{des.length > 80 ? des.slice(0, 80) : des} ...</p>
           </div>
           <div className="text-center w-full">
-            <Commonbtn>Buy Now</Commonbtn>
+            <Link to={`/tool-details/${_id}`}>
+              <Commonbtn>Buy Now</Commonbtn>
+            </Link>
           </div>
         </div>
       </div>

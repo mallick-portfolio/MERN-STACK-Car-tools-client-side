@@ -25,7 +25,7 @@ const Register = () => {
   useEffect(() => {
     if (error || gerror || upError) {
       toast("Your Register Failed. Please try again");
-      return navigate("/login");
+      return navigate("/signup");
     }
   }, [error, gerror, navigate, upError]);
   useEffect(() => {
