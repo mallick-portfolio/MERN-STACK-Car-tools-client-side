@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import auth from "../../firebase.init.js";
 import { signOut } from "firebase/auth";
 import userImg from "../../assets/images/user.jpg";
+import Commonbtn from "./Commonbtn.jsx";
 const Navbar = ({ setTheme, theme }) => {
   const [showProfile, setShowProfile] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
@@ -73,7 +74,9 @@ const Navbar = ({ setTheme, theme }) => {
           GHome
         </Link>
       </div>
-      <div className={`${user ? "navbar-center" : "navbar-end"} hidden lg:flex`}>
+      <div
+        className={`${user ? "navbar-center" : "navbar-end"} hidden lg:flex`}
+      >
         <ul className="menu menu-horizontal p-0">{menus}</ul>
       </div>
       {user && (
@@ -89,11 +92,11 @@ const Navbar = ({ setTheme, theme }) => {
               </div>
             </label>
             <div
-              className={`mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box  w-52 md:w-72 ${
+              className={`mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-300 rounded-box  w-52 md:w-72 ${
                 showProfile ? "block" : "hidden"
               }`}
             >
-              <div className="">
+              <div className="mb-4">
                 <div className="text-center">
                   <div className="avatar">
                     <div className="w-16 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
@@ -101,14 +104,21 @@ const Navbar = ({ setTheme, theme }) => {
                     </div>
                   </div>
                   <p className="text-xl my-2">{user?.displayName}</p>
+                  <Commonbtn>View Profile</Commonbtn>
                 </div>
               </div>
               <ul tabIndex="0">
                 <li>
-                  <NavLink to={'/dashboard'} className="justify-between">
+                  <Link to={"/dashboard"} className="justify-between">
                     Dashboard
                     <span className="badge">New</span>
-                  </NavLink>
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/dashboard"}>My Orders</Link>
+                </li>
+                <li>
+                  <Link to={"/dashboard/my-reviews"}>Add A Review</Link>
                 </li>
                 <li>
                   <label className="swap swap-rotate flex justify-start items-center">

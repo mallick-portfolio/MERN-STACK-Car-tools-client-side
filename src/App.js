@@ -12,6 +12,8 @@ import ToolsDetails from "./Pages/Shared/ToolsDetails.jsx";
 import RequireAuth from "./Pages/Login/RequireAuth.jsx";
 import Shop from "./Pages/Shop/Shop.jsx";
 import Dashboard from "./Pages/Dashboard/Dashboard.jsx";
+import MyOrders from "./Pages/Dashboard/MyOrders.jsx";
+import MyReviews from "./Pages/Dashboard/MyReviews.js";
 function App() {
   const [theme, setTheme] = useState(false);
   useEffect(() => {
@@ -48,7 +50,10 @@ function App() {
               <Dashboard />
             </RequireAuth>
           }
-        />
+        >
+          <Route index element={<MyOrders />} />
+          <Route path="my-reviews" element={<MyReviews />} />
+        </Route>
         {/* protected route end */}
 
         <Route path="/login" element={<Login />} />

@@ -25,7 +25,7 @@ const SingleTool = ({ tool }) => {
               Available quantity{" "}
               <span className="text-xl font-bold">{avilQty}</span>
             </p>
-            <p title={des}>{des.length > 80 ? des.slice(0, 80) : des} ...</p>
+            <p title={des}>{des?.length > 80 ? des.slice(0, 80) : des} ...</p>
           </div>
           <div className="text-center w-full">
             <Link to={`/tool-details/${_id}`}>

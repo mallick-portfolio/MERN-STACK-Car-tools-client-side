@@ -16,7 +16,6 @@ const CheckOutForm = ({ tool }) => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data, e) => {
-    console.log(data);
     const { avilQty, ...res } = data;
     
     axios

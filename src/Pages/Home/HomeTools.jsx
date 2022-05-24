@@ -4,7 +4,7 @@ import SingleTool from "./SingleTool.jsx";
 import { useQuery } from "react-query";
 import Loading from "../Shared/Loading.jsx";
 const HomeTools = () => {
-  const { isLoading, data: tools } = useQuery("repoData", () =>
+  const { isLoading, data: tools } = useQuery("tools", () =>
     fetch("http://localhost:5000/home-tools").then((res) => res.json())
   );
   if (isLoading) {
@@ -14,9 +14,8 @@ const HomeTools = () => {
     <section className="bg-base-100 lg:py-20 lg:px-16 mx-auto text-accent">
       <SectionTitle title={"Our Best Tools"} />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {tools.map((tool) => (
-          <SingleTool key={tool._id} tool={tool} />
-        ))}
+        {tools &&
+          tools.map((tool) => <SingleTool key={tool._id} tool={tool} />)}
       </div>
     </section>
   );
