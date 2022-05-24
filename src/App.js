@@ -10,9 +10,9 @@ import { themeChange } from "theme-change";
 import PageNotFound from "./Pages/Shared/PageNotFound.jsx";
 import ToolsDetails from "./Pages/Shared/ToolsDetails.jsx";
 import RequireAuth from "./Pages/Login/RequireAuth.jsx";
-import Shop from './Pages/Shop/Shop.jsx'
+import Shop from "./Pages/Shop/Shop.jsx";
 function App() {
-  const [theme, setTheme] = useState(true);
+  const [theme, setTheme] = useState(false);
   useEffect(() => {
     themeChange(false);
   }, []);
@@ -22,7 +22,10 @@ function App() {
     setTheme(theme);
   }, []);
   return (
-    <div className="overflow-hidden" data-theme={`${theme ? "light" : "dark"}`}>
+    <div
+      className="overflow-hidden"
+      data-theme={`${!theme ? "light" : "dark"}`}
+    >
       <Navbar theme={theme} setTheme={setTheme} />
       <Routes>
         <Route path="/" element={<Home />} />

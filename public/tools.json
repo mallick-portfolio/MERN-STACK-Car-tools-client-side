@@ -1,6 +1,5 @@
 [
   {
-    "_id": 1,
     "name": "Medium Gardener's Supply Cart",
     "image": "https://marvel-b1-cdn.bc0a.com/f00000000139987/www.gardeners.com/globalassets/product-media-catalog/8587/700-799/8587700/8587700c_003-1.jpg",
     "des": "For over 25 years, our garden carts have been a beloved tool of gardeners everywhere. That’s because they were designed specifically to meet the needs of gardeners, not adapted from an industrial utility cart. The big pneumatic wheels roll easily over rough terrain. High sides prevent loose loads like mulch and compost from bouncing out.",
@@ -10,7 +9,6 @@
     "rating": 2.5
   },
   {
-    "_id": 2,
     "name": "Large Gardener's Supply Cart",
     "image": "https://marvel-b1-cdn.bc0a.com/f00000000139987/www.gardeners.com/globalassets/categories/36500_0833_gsc-large-garden-cart.jpg",
     "des": "For over 25 years, our garden carts have been a beloved tool of gardeners everywhere. That’s because they were designed specifically to meet the needs of gardeners, not adapted from an industrial utility cart. This garden cart has big wheels with pneumatic tires that roll easily over rough terrain. High sides prevent loose loads like mulch and compost from bouncing out.",
@@ -20,7 +18,6 @@
     "rating": 2.5
   },
   {
-    "_id": 3,
     "name": "Gardener's Lifetime Half-Moon Hoe",
     "image": "https://marvel-b1-cdn.bc0a.com/f00000000139987/www.gardeners.com/globalassets/product-media-catalog/8586/900-999/8586976/8586976_2413.jpg",
     "des": "Also called a swan-neck hoe, this popular tool cuts weeds just below the soil surface. The ergonomic design lets you stand up straight while working, minimizing back strain, and the curved blade lets you work in tight spaces between plants and rows. To give it extra strength and durability.",
@@ -30,7 +27,6 @@
     "rating": 2.5
   },
   {
-    "_id": 4,
     "name": "Poly-Tough Cart: a Two-Wheel Wheelbarrow",
     "image": "https://marvel-b1-cdn.bc0a.com/f00000000139987/www.gardeners.com/globalassets/product-media-catalog/8609/700-799/8609775/gstcart_01.jpg",
     "des": "Thanks to its center-mounted wheels, this rugged wheelbarrow is stable and easy to maneuver, even when hauling loads up to 300 lbs. Its unique design allows the front to tip all the way to the ground while the wheels stay put.",
@@ -40,7 +36,6 @@
     "rating": 2.5
   },
   {
-    "_id": 5,
     "name": "Gardener's Puddle-Proof Tote",
     "image": "https://marvel-b1-cdn.bc0a.com/f00000000139987/www.gardeners.com/globalassets/product-media-catalog/8595/200-299/8595203/8595203_5823-1_gardeners-puddle-proof-tool-tote-portable-gardening-organizer.jpg",
     "des": "This convenient tote is the perfect grab-and-go bag for a quick weeding session or a full day in the garden. You'll have the right tool, at the right time, right at your side. Enjoy your time in the garden — instead of running back and forth to the shed for the seeds or trowel, or whatever else you forgot!",
@@ -50,7 +45,6 @@
     "rating": 5
   },
   {
-    "_id": 6,
     "name": "Galvanized Garden Tool Storage Box",
     "image": "https://marvel-b1-cdn.bc0a.com/f00000000139987/www.gardeners.com/globalassets/product-media-catalog/8610/800-899/8610811/8610811_001_galvanized-garden-tool-storage-box.jpg",
     "des": "Keep your go-to gardening hand tools where it makes the most sense — right where you use them! Oversize storage box is made from galvanized steel for rust resistance and durability, and the smart design keeps water from getting in and ruining your tools.",
@@ -60,7 +54,6 @@
     "rating": 4.5
   },
   {
-    "_id": 7,
     "name": "Gardener's Lifetime Hori Hori Knife",
     "image": "https://marvel-b1-cdn.bc0a.com/f00000000139987/www.gardeners.com/globalassets/product-media-catalog/8608/800-899/8608888/8608888_0416.jpg",
     "des": "An original Japanese design, this multipurpose knife is an indispensable tool in your gardening arsenal. Dig, weed, saw, split — you name it the Hori Hori can do it. You'll wonder how you ever got along without it!",
@@ -70,7 +63,6 @@
     "rating": 3
   },
   {
-    "_id": 8,
     "name": "Pocket Snips",
     "image": "https://marvel-b1-cdn.bc0a.com/f00000000139987/www.gardeners.com/globalassets/product-media-catalog/8586/300-399/8586317/8586317gr_001e.jpg",
     "des": "Our staff gardeners love these compact snips. The ergonomic, non-slip grip and narrow, super-sharp blades let you make precision cuts without damaging nearby stems. Perfect for harvesting herbs, flowers, fruits",

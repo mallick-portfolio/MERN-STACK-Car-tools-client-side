@@ -2,18 +2,36 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import auth from "../../firebase.init.js";
-
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 const CheckOutForm = ({ tool }) => {
   const [user] = useAuthState(auth);
-  const { minQty, avilQty } = tool;
+  const { minQty, avilQty, name, _id } = tool;
+  const navigate = useNavigate()
   const {
     register,
     handleSubmit,
-    getValues,
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data, e) => {
+    console.log(data);
+    const { avilQty, ...res } = data;
+    
+    axios
+      .post("http://localhost:5000/order", {
+        ...res,
+        title: name,
+        productId: _id,
+      })
+      .then((res) => {
+        if(res.data.acknowledged){
+          toast('Order Successfully.')
+          navigate('/')
+        }
+      });
+  };
 
   return (
     <div className="basis-1/2 relative rounded-lg mx-2 bg-base-300">
@@ -30,7 +48,7 @@ const CheckOutForm = ({ tool }) => {
           <input
             className="input input-bordered w-full text-xl  my-1"
             disabled
-            {...register("name", { value: user?.displayName })}
+            value={user?.displayName}
           />
           <input
             className="input input-bordered w-full text-xl  my-1"
@@ -59,6 +77,7 @@ const CheckOutForm = ({ tool }) => {
               </span>
             </label>
             <input
+            type={'number'}
               {...register("quantity", {
                 required: "Your selling quantity must be required",
                 validate: (val) => {
@@ -125,16 +144,10 @@ const CheckOutForm = ({ tool }) => {
           <div className=" absolute bottom-10 right-5">
             <input
               type="submit"
-              disabled={
-                !watch("quantity") ||
-                getValues("quantity") > avilQty ||
-                getValues("quantity") < minQty
-              }
+              disabled={!watch("quantity")}
               value="Submit"
               className={`px-4 py-1 sm:px-12 sm:py-3 text-sm text-white rounded-md border-0  cursor-pointer ${
-                !watch("quantity") ||
-                getValues("quantity") > avilQty ||
-                getValues("quantity") < minQty
+                !watch("quantity")
                   ? "bg-slate-400 cursor-not-allowed"
                   : "bg-neutral"
               }`}

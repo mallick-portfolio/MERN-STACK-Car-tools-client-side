@@ -9,6 +9,7 @@ import {
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import Loading from "../Shared/Loading.jsx";
+import useToken from "../../hooks/useToken.js";
 const Register = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
@@ -21,7 +22,7 @@ const Register = () => {
     formState: { errors },
   } = useForm();
   const navigate = useNavigate();
-
+  const [token] = useToken(user || guser);
   useEffect(() => {
     if (error || gerror || upError) {
       toast("Your Register Failed. Please try again");
@@ -29,11 +30,11 @@ const Register = () => {
     }
   }, [error, gerror, navigate, upError]);
   useEffect(() => {
-    if (user || guser) {
+    if (token) {
       toast("Registation Successfully");
       navigate("/");
     }
-  }, [guser, navigate, user]);
+  }, [navigate, token]);
   if (loading || gloading || updating) {
     return <Loading />;
   }

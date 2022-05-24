@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../firebase.init.js";
+import useToken from "../../hooks/useToken.js";
 import Loading from "../Shared/Loading.jsx";
 const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -24,6 +25,7 @@ const Login = () => {
   let location = useLocation();
 
   let from = location.state?.from?.pathname || "/";
+  const [token] = useToken(user || guser)
   useEffect(() => {
     if (error || gerror) {
       toast("Your email or passowrd is not correct. Please try again");
@@ -31,11 +33,11 @@ const Login = () => {
     }
   }, [error, gerror, navigate]);
   useEffect(() => {
-    if (user || guser) {
+    if (token) {
       toast("Login Successfully");
       navigate(from, { replace: true });
     }
-  }, [from, guser, navigate, user]);
+  }, [from, navigate, token]);
   if (loading || sending || gloading) {
     return <Loading />;
   }
