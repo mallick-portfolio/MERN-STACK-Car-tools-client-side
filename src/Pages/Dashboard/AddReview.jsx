@@ -7,7 +7,7 @@ import StarRatings from "react-star-ratings";
 import { toast } from "react-toastify";
 import auth from "../../firebase.init.js";
 
-const MyReviews = () => {
+const AddReview = () => {
   const [user] = useAuthState(auth);
   const [rating, setRating] = useState(5);
   const navigate = useNavigate();
@@ -23,6 +23,7 @@ const MyReviews = () => {
         des: data.des,
         img: user?.photoURL,
         name: user?.displayName,
+        email: user?.email,
         rating,
       })
       .then((res) => {
@@ -84,4 +85,4 @@ const MyReviews = () => {
   );
 };
 
-export default MyReviews;
+export default AddReview;

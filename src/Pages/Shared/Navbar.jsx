@@ -118,7 +118,7 @@ const Navbar = ({ setTheme, theme }) => {
                   <Link to={"/dashboard"}>My Orders</Link>
                 </li>
                 <li>
-                  <Link to={"/dashboard/my-reviews"}>Add A Review</Link>
+                  <Link to={"/dashboard/add-review"}>Add Review</Link>
                 </li>
                 <li>
                   <label className="swap swap-rotate flex justify-start items-center">

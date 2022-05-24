@@ -13,7 +13,8 @@ import RequireAuth from "./Pages/Login/RequireAuth.jsx";
 import Shop from "./Pages/Shop/Shop.jsx";
 import Dashboard from "./Pages/Dashboard/Dashboard.jsx";
 import MyOrders from "./Pages/Dashboard/MyOrders.jsx";
-import MyReviews from "./Pages/Dashboard/MyReviews.js";
+import MyReviews from "./Pages/Dashboard/MyReviews.jsx";
+import AddReview from "./Pages/Dashboard/AddReview.jsx";
 function App() {
   const [theme, setTheme] = useState(false);
   useEffect(() => {
@@ -53,6 +54,7 @@ function App() {
         >
           <Route index element={<MyOrders />} />
           <Route path="my-reviews" element={<MyReviews />} />
+          <Route path="add-review" element={<AddReview />} />
         </Route>
         {/* protected route end */}
 
