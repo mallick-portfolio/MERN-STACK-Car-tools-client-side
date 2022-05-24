@@ -4,12 +4,12 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useQuery } from "react-query";
 import { useNavigate } from "react-router-dom";
 import auth from "../../firebase.init.js";
-import Commonbtn from "../Shared/Commonbtn.jsx";
 import Loading from "../Shared/Loading.jsx";
+import OrderRow from "./OrderRow.jsx";
 const MyOrders = () => {
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
-  const { isLoading, data: orders } = useQuery("getOrder", () =>
+  const { isLoading, data: orders, refetch } = useQuery("getOrder", () =>
     fetch(`http://localhost:5000/orders/${user?.email}`, {
       method: "GET",
       headers: {
@@ -27,9 +27,7 @@ const MyOrders = () => {
   if (isLoading) {
     return <Loading />;
   }
-  const handleDelete = (id) => {
-    
-  }
+ 
   
   return (
     <div className="overflow-hidden overflow-y-hidden py-4">
@@ -44,20 +42,12 @@ const MyOrders = () => {
               <th>Action</th>
             </tr>
           ) : (
-            <h2 className="text-2xl">You have no order</h2>
+            <h2 className="text-2xl">You have 0 order</h2>
           )}
         </thead>
         <tbody>
           {orders.map((order, i) => (
-            <tr key={order._id}>
-              <th>{i + 1}</th>
-              <td>{order?.title}</td>
-              <td>{order?.price}</td>
-              <td>{order?.quantity}</td>
-              <td>
-                <Commonbtn className="btn-sm">Delete</Commonbtn>
-              </td>
-            </tr>
+            <OrderRow refetch={refetch} key={order._id} i={i} order={order} />
           ))}
         </tbody>
       </table>

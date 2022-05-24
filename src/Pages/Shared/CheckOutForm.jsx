@@ -8,7 +8,6 @@ import { toast } from "react-toastify";
 const CheckOutForm = ({ tool }) => {
   const [user] = useAuthState(auth);
   const { minQty, avilQty, name, _id, singlePrice } = tool;
-  console.log(tool)
   const navigate = useNavigate()
   const {
     register,
@@ -29,7 +28,7 @@ const CheckOutForm = ({ tool }) => {
       .then((res) => {
         if(res.data.acknowledged){
           toast('Order Successfully.')
-          navigate('/')
+          navigate('/dashboard')
         }
       });
   };
