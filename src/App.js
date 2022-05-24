@@ -11,6 +11,7 @@ import PageNotFound from "./Pages/Shared/PageNotFound.jsx";
 import ToolsDetails from "./Pages/Shared/ToolsDetails.jsx";
 import RequireAuth from "./Pages/Login/RequireAuth.jsx";
 import Shop from "./Pages/Shop/Shop.jsx";
+import Dashboard from "./Pages/Dashboard/Dashboard.jsx";
 function App() {
   const [theme, setTheme] = useState(false);
   useEffect(() => {
@@ -37,6 +38,14 @@ function App() {
           element={
             <RequireAuth>
               <ToolsDetails />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard />
             </RequireAuth>
           }
         />

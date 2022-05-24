@@ -105,10 +105,10 @@ const Navbar = ({ setTheme, theme }) => {
               </div>
               <ul tabIndex="0">
                 <li>
-                  <a className="justify-between">
+                  <NavLink to={'/dashboard'} className="justify-between">
                     Dashboard
                     <span className="badge">New</span>
-                  </a>
+                  </NavLink>
                 </li>
                 <li>
                   <label className="swap swap-rotate flex justify-start items-center">
