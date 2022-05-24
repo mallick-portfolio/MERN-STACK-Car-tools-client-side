@@ -22,7 +22,7 @@ const SingleTool = ({ tool }) => {
               Minimum order quantity <span className="font-bold">{minQty}</span>
             </p>
             <p className="text-sm font-bold">
-              Available quantity{" "}
+              Available quantity
               <span className="text-xl font-bold">{avilQty}</span>
             </p>
             <p title={des}>{des?.length > 80 ? des.slice(0, 80) : des} ...</p>
