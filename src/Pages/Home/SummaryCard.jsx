@@ -4,15 +4,15 @@ import React from "react";
 import CountUp from "react-countup";
 
 const SummaryCard = ({ summary }) => {
-  console.log(summary);
+
   const { title, icon, count, ext } = summary;
   return (
-    <div class="stats py-4 shadow-lg text-accent bg-base-300 text-center">
-      <div class="stat">
-        <div class="stat-title">
+    <div className="stats py-4 shadow-lg text-accent bg-base-300 text-center">
+      <div className="stat">
+        <div className="stat-title">
           <FontAwesomeIcon className="text-4xl " icon={faFlag} />
         </div>
-        <div class="stat-value">
+        <div className="stat-value">
           <CountUp
             start={0}
             end={count}
@@ -22,7 +22,7 @@ const SummaryCard = ({ summary }) => {
           />
           {ext && ext}
         </div>
-        <div class="text-xl">{title}</div>
+        <div className="text-xl">{title}</div>
       </div>
     </div>
   );
