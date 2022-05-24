@@ -7,7 +7,8 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 const CheckOutForm = ({ tool }) => {
   const [user] = useAuthState(auth);
-  const { minQty, avilQty, name, _id } = tool;
+  const { minQty, avilQty, name, _id, singlePrice } = tool;
+  console.log(tool)
   const navigate = useNavigate()
   const {
     register,
@@ -23,6 +24,7 @@ const CheckOutForm = ({ tool }) => {
         ...res,
         title: name,
         productId: _id,
+        price: singlePrice
       })
       .then((res) => {
         if(res.data.acknowledged){
