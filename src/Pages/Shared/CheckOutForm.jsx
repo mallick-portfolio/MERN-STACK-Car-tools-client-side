@@ -2,7 +2,6 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import auth from "../../firebase.init.js";
-import Commonbtn from "./Commonbtn.jsx";
 
 const CheckOutForm = ({ tool }) => {
   const [user] = useAuthState(auth);
@@ -10,7 +9,7 @@ const CheckOutForm = ({ tool }) => {
   const {
     register,
     handleSubmit,
-
+    getValues,
     watch,
     formState: { errors },
   } = useForm();
@@ -60,10 +59,10 @@ const CheckOutForm = ({ tool }) => {
               </span>
             </label>
             <input
-              {...register("minQty", {
-                required: true,
+              {...register("quantity", {
+                required: "Your selling quantity must be required",
                 validate: (val) => {
-                  if (val >= watch("avilQty")) {
+                  if (val >= avilQty) {
                     return "Order quantity can not be higher than the available quantity";
                   } else if (val < minQty) {
                     return "Order quantity can not be Lower than the available quantity";
@@ -73,8 +72,8 @@ const CheckOutForm = ({ tool }) => {
               className="input input-bordered w-full text-xl  my-1"
             />
 
-            {errors.minQty && (
-              <p className="text-red-500">{errors.minQty.message}</p>
+            {errors.quantity && (
+              <p className="text-red-500">{errors.quantity.message}</p>
             )}
           </div>
 
@@ -116,7 +115,7 @@ const CheckOutForm = ({ tool }) => {
             placeholder="Contact/Phone Number"
             {...register("phone", {
               defaultValue: "",
-              required:  "Phone number required for Contact",
+              required: "Phone number required for Contact",
             })}
           />
           {errors.phone && (
@@ -124,7 +123,22 @@ const CheckOutForm = ({ tool }) => {
           )}
 
           <div className=" absolute bottom-10 right-5">
-            <Commonbtn type="submit">Confirm Order</Commonbtn>
+            <input
+              type="submit"
+              disabled={
+                !watch("quantity") ||
+                getValues("quantity") > avilQty ||
+                getValues("quantity") < minQty
+              }
+              value="Submit"
+              className={`px-4 py-1 sm:px-12 sm:py-3 text-sm text-white rounded-md border-0  cursor-pointer ${
+                !watch("quantity") ||
+                getValues("quantity") > avilQty ||
+                getValues("quantity") < minQty
+                  ? "bg-slate-400 cursor-not-allowed"
+                  : "bg-neutral"
+              }`}
+            />
           </div>
         </form>
       </div>
