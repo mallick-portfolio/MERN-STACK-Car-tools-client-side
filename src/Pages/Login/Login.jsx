@@ -24,7 +24,7 @@ const Login = () => {
   let navigate = useNavigate();
   let location = useLocation();
 
-  let from = location.state?.from?.pathname || "/";
+  let from = location.state?.from?.pathname || "/dashboard";
   const [token] = useToken(user || guser);
   useEffect(() => {
     if (error || gerror) {

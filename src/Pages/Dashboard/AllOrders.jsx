@@ -34,7 +34,7 @@ const AllOrders = () => {
               <th>Action</th>
             </tr>
           ) : (
-            <h2 className="text-2xl">You have 0 order</h2>
+            <h2 className="text-2xl">No Order Found</h2>
           )}
         </thead>
         <tbody>

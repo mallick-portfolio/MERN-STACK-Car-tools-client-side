@@ -104,9 +104,14 @@ We are a manufacturer. We are looking for a front-end web developer to build a w
 
 8. on the `Manage Products` page, an admin can delete any products. Please make sure there is a confirmation. After deleting that product will not appear on the `home` page. Use a meaningful and good-looking confirmation modal. Avoid using browser default confirm.
 
-9. Use `react query` for at least one API call. 
+9. Use `react query` for at least one API call. ------------
 
-10. Use `react hook form` at least one form. For the rest of the forms, you can either use react hook form or basic html form or any other form you want.
+10. Use `react hook form` at least one form. For the rest of the forms, you can either use react hook form or basic html form or any other form you want.------------
+
+
+
+
+
 
 ### Optional but highly encouraged to do:
 Make sure you have done everything on the main part and bonus. Deploy and test everything. After that, you may try optional things.

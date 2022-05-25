@@ -21,6 +21,7 @@ const OrderRow = ({ order, i, refetch }) => {
       <td>{order?.title}</td>
       <td>{order?.price}</td>
       <td>{order?.quantity}</td>
+      <td>{order?.status}</td>
       <td>
         <button
           className="px-4 py-1 sm:px-12 sm:py-3 text-sm text-white rounded-md border-0 bg-neutral"
