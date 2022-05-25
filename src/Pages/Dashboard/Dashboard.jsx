@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
   return (
@@ -32,6 +32,9 @@ const Dashboard = () => {
           </li>
           <li>
             <a>My Profile</a>
+          </li>
+          <li>
+            <Link to={"/dashboard/users"}>Users</Link>
           </li>
         </ul>
       </div>

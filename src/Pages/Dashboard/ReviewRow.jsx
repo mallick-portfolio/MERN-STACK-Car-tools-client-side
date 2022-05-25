@@ -1,9 +1,12 @@
 import React from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
 const ReviewRow = ({ review, i, refetch }) => {
   const handleDelete = async (id) => {
     await axios.delete(`http://localhost:5000/reviews/${id}`).then((res) => {
-      console.log(res);
+      if (res.data) {
+        toast("Delete Successfully");
+      }
       refetch();
     });
   };

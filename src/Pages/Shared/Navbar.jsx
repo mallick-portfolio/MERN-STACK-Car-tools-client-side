@@ -121,6 +121,9 @@ const Navbar = ({ setTheme, theme }) => {
                   <Link to={"/dashboard/add-review"}>Add Review</Link>
                 </li>
                 <li>
+                  <Link to={"/dashboard/my-reviews"}>My Reviews</Link>
+                </li>
+                <li>
                   <label className="swap swap-rotate flex justify-start items-center">
                     {theme ? "Go to Dark" : "Go to Light"}
                     <input

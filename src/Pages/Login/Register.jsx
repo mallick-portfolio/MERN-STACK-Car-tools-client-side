@@ -25,6 +25,7 @@ const Register = () => {
   const [token] = useToken(user || guser);
   useEffect(() => {
     if (error || gerror || upError) {
+      console.log(error, gerror, upError)
       toast("Your Register Failed. Please try again");
       return navigate("/signup");
     }

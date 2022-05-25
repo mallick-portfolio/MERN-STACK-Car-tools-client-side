@@ -15,6 +15,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard.jsx";
 import MyOrders from "./Pages/Dashboard/MyOrders.jsx";
 import MyReviews from "./Pages/Dashboard/MyReviews.jsx";
 import AddReview from "./Pages/Dashboard/AddReview.jsx";
+import Users from "./Pages/Dashboard/Users.jsx";
 function App() {
   const [theme, setTheme] = useState(false);
   useEffect(() => {
@@ -55,6 +56,7 @@ function App() {
           <Route index element={<MyOrders />} />
           <Route path="my-reviews" element={<MyReviews />} />
           <Route path="add-review" element={<AddReview />} />
+          <Route path="users" element={<Users />} />
         </Route>
         {/* protected route end */}
 
