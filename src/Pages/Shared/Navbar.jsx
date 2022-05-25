@@ -28,7 +28,7 @@ const Navbar = ({ setTheme, theme }) => {
         <a>About</a>
       </li>
       <li>
-        <a>About</a>
+        <NavLink to={"/blogs"}>Blogs</NavLink>
       </li>
       {!user && (
         <li>

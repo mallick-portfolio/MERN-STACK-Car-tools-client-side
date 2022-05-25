@@ -1,20 +1,22 @@
 import React from "react";
-import axios from "axios";
+import { toast } from "react-toastify";
 const UserRow = ({ user, i, refetch }) => {
-  // const handleDelete = async (id, productId) => {
-  //   console.log(productId);
-  //   await axios
-  //     .delete(`http://localhost:5000/users/${id}`, {
-  //       method: "DELETE",
-  //       headers: {
-  //         productId: `${productId}`,
-  //       },
-  //     })
-  //     .then((res) => {
-  //       console.log(res);
-  //       refetch();
-  //     });
-  // };
+  const handleAdmin = (email) => {
+    console.log(email);
+    fetch(`http://localhost:5000/user/admin/${email}`, {
+      method: "PUT",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) =>{
+        if(data.acknowledged){
+          toast('Admin Create Successfully')
+          refetch()
+        }
+      });
+  };
   return (
     <tr>
       <th>{i + 1}</th>
@@ -23,7 +25,7 @@ const UserRow = ({ user, i, refetch }) => {
       <td>
         <button
           className="px-4 py-1  sm:py-3 text-sm text-white rounded-md buser-0 bg-success"
-          // onClick={() => handleDelete(user?._id, user?.productId)}
+          onClick={() => handleAdmin(user?.email)}
         >
           Make Admin
         </button>

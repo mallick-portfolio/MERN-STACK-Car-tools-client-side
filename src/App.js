@@ -16,6 +16,7 @@ import MyOrders from "./Pages/Dashboard/MyOrders.jsx";
 import MyReviews from "./Pages/Dashboard/MyReviews.jsx";
 import AddReview from "./Pages/Dashboard/AddReview.jsx";
 import Users from "./Pages/Dashboard/Users.jsx";
+import Blogs from "./Pages/Blogs/Blogs.jsx";
 function App() {
   const [theme, setTheme] = useState(false);
   useEffect(() => {
@@ -60,6 +61,7 @@ function App() {
         </Route>
         {/* protected route end */}
 
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Register />} />
 
