@@ -1,63 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import people1 from "../../assets/images/people1.png";
-import people2 from "../../assets/images/people2.png";
-import people3 from "../../assets/images/people3.png";
 import ReviewCard from "./ReviewCard.jsx";
 import SectionTitle from "../Shared/SectionTitle.jsx";
+import axios from "axios";
+import { useQuery } from "react-query";
+import Loading from "../Shared/Loading.jsx";
 
 const Reviews = () => {
-  const reviews = [
-    {
-      _id: 1,
-      name: "Winson Herry",
-      rating: 4,
-      des: "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
-      img: people1,
-    },
-    {
-      _id: 2,
-      name: "Winson Herry",
-      rating: 4.4,
-      des: "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
-      img: people2,
-    },
-    {
-      _id: 3,
-      name: "Winson Herry",
-      rating: 5,
-      des: "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
-      img: people3,
-    },
-    {
-      _id: 4,
-      name: "Winson Herry",
-      rating: 2.5,
-      des: "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
-      img: people1,
-    },
-    {
-      _id: 5,
-      name: "Winson Herry",
-      rating: 5,
-      des: "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
-      img: people2,
-    },
-    {
-      _id: 6,
-      name: "Winson Herry",
-      rating: 4.2,
-      des: "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
-      img: people3,
-    },
-  ];
+  const {
+    isLoading,
+    data: reviews,
+  } = useQuery("repoData", () =>
+    fetch("http://localhost:5000/reviews").then((res) => res.json())
+  );
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <section className="container lg:py-12">
-      <SectionTitle title={"Our Realer Reviews"} />
+      <SectionTitle title={"Our Dealer Reviews"} />
       <Swiper
         effect={"coverflow"}
         grabCursor={true}

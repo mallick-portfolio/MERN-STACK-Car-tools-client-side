@@ -1,11 +1,6 @@
 import React from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
-import auth from "../../firebase.init.js";
-import useAdmin from "../../hooks/useAdmin.js";
 const UserRow = ({ u, i, refetch }) => {
-  const [user] = useAuthState(auth);
-  const [admin] = useAdmin(user);
   const handleAdmin = (email) => {
     console.log(email);
     fetch(`http://localhost:5000/user/admin/${email}`, {

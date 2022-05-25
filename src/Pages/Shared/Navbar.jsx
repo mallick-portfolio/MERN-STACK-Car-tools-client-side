@@ -5,6 +5,7 @@ import auth from "../../firebase.init.js";
 import { signOut } from "firebase/auth";
 import userImg from "../../assets/images/user.jpg";
 import Commonbtn from "./Commonbtn.jsx";
+import useAdmin from "../../hooks/useAdmin.js";
 const Navbar = ({ setTheme, theme }) => {
   const [showProfile, setShowProfile] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
@@ -12,6 +13,7 @@ const Navbar = ({ setTheme, theme }) => {
     signOut(auth);
   };
   const [user] = useAuthState(auth);
+  const [admin] = useAdmin(user);
 
   const menus = (
     <>
@@ -114,15 +116,24 @@ const Navbar = ({ setTheme, theme }) => {
                     <span className="badge">New</span>
                   </Link>
                 </li>
-                <li>
-                  <Link to={"/dashboard"}>My Orders</Link>
-                </li>
-                <li>
-                  <Link to={"/dashboard/add-review"}>Add Review</Link>
-                </li>
-                <li>
-                  <Link to={"/dashboard/my-reviews"}>My Reviews</Link>
-                </li>
+                {!admin && (
+                  <>
+                    <li>
+                      <Link to={"/dashboard"}>My Orders</Link>
+                    </li>
+                    <li>
+                      <Link to={"/dashboard/add-review"}>Add Review</Link>
+                    </li>
+                    <li>
+                      <Link to={"/dashboard/my-reviews"}>My Reviews</Link>
+                    </li>
+                  </>
+                )}
+                {admin && (
+                  <li>
+                    <Link to={"/dashboard/users"}>Users</Link>
+                  </li>
+                )}
                 <li>
                   <label className="swap swap-rotate flex justify-start items-center">
                     {theme ? "Go to Dark" : "Go to Light"}

@@ -33,7 +33,7 @@ const Users = () => {
     return <Loading />;
   }
   return (
-    <div className="overflow-hidden overflow-y-hidden py-4">
+    <div className="overflow-x-auto overflow-y-hidden py-4">
       <table className="table table-zebra w-full">
         <thead>
           {users.length > 0 ? (

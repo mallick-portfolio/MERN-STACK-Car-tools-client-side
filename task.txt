@@ -21,9 +21,13 @@ We are a manufacturer. We are looking for a front-end web developer to build a w
 
 
 
-
-
 2. Add two different sections on the home page and the 6 sections mentioned above. Tips: This is the place to shine. Add something different and unique to make your website looks different than others. And Make them relevant to your website. And make these two sections meaningful.
+
+
+
+
+
+
 
 3. The business summary will show some summary of your business. There could be 3/4 summary on this summary section. For example, we served 100+ customers, 120M+ Annual revenue, 33K+ Reviews, 50+ tools, etc. Make sure you use some relevant icons here. You can use Hero Icons, React Icons, Font Awesome, Bootstrap Icons, Daisy UI or any icons that you like. To see an example, you will find an image in the images folder of this repository.
 
@@ -36,7 +40,14 @@ We are a manufacturer. We are looking for a front-end web developer to build a w
 
 6. Implement an email/ password (login/Register) based login system. The registration form should hafe the name, and once a user is logged in, the user name and the logout button should appear on the header, which will log out the user once clicked. Implement at least one social login system (google, facebook, or github, etc.). Make sure to display login-related errors and password validation-related errors. 
 
+
+
+
 7. If a user is logged in, they will see another option on the header is called `Dashboard`. Inside the dashboard, a user (not an admin) will see options like `My Orders`, `Add A Review`, `My Profile` options on the side nav. This is the time to implement a nested route. Based on your website idea, you can change the name of these menu items. The My Profile link will be open for everyone. This means every user will be able to see my profile link and update their profile.
+
+
+
+
 
 8. On `My Orders` page, the logged-in user will see only their orders. If the user wants, they should be able to cancel (canceling is just deleting the order) any order that is not paid yet. Ask for a confirmation message before canceling an order. Do not use browser default confirm. Instead, use a good-looking modal. Please note users will not see the cancel option for any paid order.
 
@@ -44,7 +55,11 @@ We are a manufacturer. We are looking for a front-end web developer to build a w
 
 10. On the `Add A Review` page, users should be able to add a review. A review will contain ratings ( a number 1 to 5 and a description). That review will appear on the home page reviews section. Right now, you will see every review on the home page. There is no limit on the number of reviews or the order of the review.
 
+
+
 11. The `My profile` route will be available for every user (admin or non-admin. everyone will see this link). The user will see their name and email address on this profile in this link. Also, this page will have fields to add fields like education, location (city/district), phone number, LinkedIn profile link, etc. And users will be able to save this information in the database. Also, the user will be able to update this information.
+
+
 
 12. If an admin logs in, they will not see the options that a user sees except `My Profile`. This means an admin will not see my orders and add a review link. Instead, an admin will see `My Profile`, `Manage All Orders`, `Add A Product`, `Make Admin`, `Manage Products`. Based on your website idea, you can change the name of these menu names. Manage products will be described in the bonus section.
 
@@ -66,16 +81,16 @@ We are a manufacturer. We are looking for a front-end web developer to build a w
 
 15. Create `My Portfolio` route. In this route, you will have your name, email address, educational background, list of technologies or skills you have as a web developer. Add links of three of your projects (live website links). Adding descriptions or screenshots of your projects are optional.
 
-16. Create a meaningful 404 page (not found page). Add a meaningful image on the 404 page.
+16. Create a meaningful 404 page (not found page). Add a meaningful image on the 404 page.------
 
-17. Use a database to store information. It could be mongodb atlas or any other database.
+17. Use a database to store information. It could be mongodb atlas or any other database.--------
 
 ### Bonus: 
 1. Meaningful `readme.md` file on both the client and server sides containing your website name, a link to your live site. Add at least five bullet points that mention your website's different features and functionality.
 
-2. At least 15 meaningful GitHub commits for the client-side and at least 10 meaningful commits for the server-side repository.
+2. At least 15 meaningful GitHub commits for the client-side and at least 10 meaningful commits for the server-side repository. ---------
 
-3. Make the website responsive. Make sure the site looks different on desktop and mobile responsive. Tablet responsive is optional.
+3. Make the website responsive. Make sure the site looks different on desktop and mobile responsive. Tablet responsive is optional. --------
 
 4. Make the website meaningful and consistent in look and feel. Give your website a relevant name. Images and all the content of the website have to be appropriate. No `lorem ipsum` please. 
 
