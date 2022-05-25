@@ -20,6 +20,7 @@ import Blogs from "./Pages/Blogs/Blogs.jsx";
 import RequireAdmin from "./Pages/Login/RequireAdmin.jsx";
 import AllOrders from "./Pages/Dashboard/AllOrders.jsx";
 import ManageProducts from "./Pages/Dashboard/ManageProducts.jsx";
+import AddProduct from "./Pages/Dashboard/AddProduct.jsx";
 function App() {
   const [theme, setTheme] = useState(false);
   useEffect(() => {
@@ -81,6 +82,14 @@ function App() {
             element={
               <RequireAdmin>
                 <ManageProducts />
+              </RequireAdmin>
+            }
+          />
+          <Route
+            path="add-product"
+            element={
+              <RequireAdmin>
+                <AddProduct />
               </RequireAdmin>
             }
           />

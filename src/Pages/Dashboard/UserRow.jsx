@@ -1,3 +1,5 @@
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { toast } from "react-toastify";
 const UserRow = ({ u, i, refetch }) => {
@@ -33,7 +35,7 @@ const UserRow = ({ u, i, refetch }) => {
         )}
         {u?.role !== 'admin' && (
           <button className="px-4 mx-1 py-1 sm:px-8 sm:py-3 text-sm text-white rounded-md buser-0 bg-neutral">
-            Delete
+            <FontAwesomeIcon icon={faTrash} />
           </button>
         )}
       </td>

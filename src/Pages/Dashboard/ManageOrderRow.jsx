@@ -1,3 +1,5 @@
+import { faDeleteLeft, faPenToSquare, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 const ManageOrderRow = ({ product, i }) => {
@@ -12,13 +14,13 @@ const ManageOrderRow = ({ product, i }) => {
           className="input input-bordered text-white rounded-md border-0 bg-primary cursor-pointer btn-sm mx-2"
           // onClick={() => handleDelete(order?._id, order?.productId)}
         >
-          Edit
+          <FontAwesomeIcon icon={faPenToSquare} />
         </button>
         <button
           className="input input-bordered text-white rounded-md border-0 bg-neutral cursor-pointer btn-sm mx-2"
           // onClick={() => handleDelete(order?._id, order?.productId)}
         >
-          Delete
+          <FontAwesomeIcon icon={faTrash} />
         </button>
       </td>
     </tr>

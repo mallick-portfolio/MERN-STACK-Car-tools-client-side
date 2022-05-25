@@ -12,7 +12,7 @@ const ChecoutToolDetail = ({ tool }) => {
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
           <h2 className="text-sm">
-            <span className="text-3xl">${singlePrice}</span> (Per tool price)
+            <span className="text-3xl">${singlePrice}</span> (Per product price)
           </h2>
           <StarRatings
             starDimension={"20px"}
