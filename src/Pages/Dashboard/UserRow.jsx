@@ -28,7 +28,7 @@ const UserRow = ({ u, i, refetch }) => {
       <td>{u?.name}</td>
       <td>{u?.email}</td>
       <td>
-        {!admin && (
+        {u?.role !== 'admin' && (
           <button
             className="px-4 py-1  sm:py-3 text-sm text-white rounded-md buser-0 bg-success"
             onClick={() => handleAdmin(u?.email)}
@@ -36,7 +36,7 @@ const UserRow = ({ u, i, refetch }) => {
             Make Admin
           </button>
         )}
-        {admin && (
+        {u?.role !== 'admin' && (
           <button className="px-4 mx-1 py-1 sm:px-8 sm:py-3 text-sm text-white rounded-md buser-0 bg-neutral">
             Delete
           </button>
