@@ -48,8 +48,8 @@ const Users = () => {
           )}
         </thead>
         <tbody>
-          {users.map((user, i) => (
-            <UserRow refetch={refetch} key={user._id} i={i} user={user} />
+          {users.map((u, i) => (
+            <UserRow refetch={refetch} key={u._id} i={i} u={u} />
           ))}
         </tbody>
       </table>
