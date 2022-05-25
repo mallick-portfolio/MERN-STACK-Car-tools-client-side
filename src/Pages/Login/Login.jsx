@@ -25,7 +25,7 @@ const Login = () => {
   let location = useLocation();
 
   let from = location.state?.from?.pathname || "/";
-  const [token] = useToken(user || guser)
+  const [token] = useToken(user || guser);
   useEffect(() => {
     if (error || gerror) {
       toast("Your email or passowrd is not correct. Please try again");

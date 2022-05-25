@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -6,7 +6,6 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import ReviewCard from "./ReviewCard.jsx";
 import SectionTitle from "../Shared/SectionTitle.jsx";
-import axios from "axios";
 import { useQuery } from "react-query";
 import Loading from "../Shared/Loading.jsx";
 

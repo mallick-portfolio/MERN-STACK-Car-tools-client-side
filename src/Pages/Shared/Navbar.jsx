@@ -130,9 +130,14 @@ const Navbar = ({ setTheme, theme }) => {
                   </>
                 )}
                 {admin && (
-                  <li>
-                    <Link to={"/dashboard/users"}>Users</Link>
-                  </li>
+                  <>
+                    <li>
+                      <Link to={"/dashboard/users"}>Users</Link>
+                    </li>
+                    <li>
+                      <Link to={"/dashboard/orders"}>Orders</Link>
+                    </li>
+                  </>
                 )}
                 <li>
                   <label className="swap swap-rotate flex justify-start items-center">

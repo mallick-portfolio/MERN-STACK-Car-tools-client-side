@@ -29,7 +29,7 @@ const AddReview = () => {
       .then((res) => {
         if (res.data.acknowledged) {
           toast("Review Successfully.");
-          navigate("/dashboard");
+          navigate("/dashboard/my-reviews");
         }
       });
   };
@@ -54,7 +54,7 @@ const AddReview = () => {
           name="des"
           required
           rows={8}
-          class="textarea w-full textarea-bordered"
+          className="textarea w-full textarea-bordered"
           placeholder="Comment your Review (character between 80 to 250)"
         ></textarea>
         {errors.des && <p className="text-red-500">{errors.des?.message}</p>}

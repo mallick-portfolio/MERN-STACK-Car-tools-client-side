@@ -17,6 +17,8 @@ import MyReviews from "./Pages/Dashboard/MyReviews.jsx";
 import AddReview from "./Pages/Dashboard/AddReview.jsx";
 import Users from "./Pages/Dashboard/Users.jsx";
 import Blogs from "./Pages/Blogs/Blogs.jsx";
+import RequireAdmin from "./Pages/Login/RequireAdmin.jsx";
+import AllOrders from "./Pages/Dashboard/AllOrders.jsx";
 function App() {
   const [theme, setTheme] = useState(false);
   useEffect(() => {
@@ -57,7 +59,22 @@ function App() {
           <Route index element={<MyOrders />} />
           <Route path="my-reviews" element={<MyReviews />} />
           <Route path="add-review" element={<AddReview />} />
-          <Route path="users" element={<Users />} />
+          <Route
+            path="users"
+            element={
+              <RequireAdmin>
+                <Users />
+              </RequireAdmin>
+            }
+          />
+          <Route
+            path="orders"
+            element={
+              <RequireAdmin>
+                <AllOrders />
+              </RequireAdmin>
+            }
+          />
         </Route>
         {/* protected route end */}
 
