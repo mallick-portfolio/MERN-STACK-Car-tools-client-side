@@ -3,7 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, NavLink } from "react-router-dom";
 import auth from "../../firebase.init.js";
 import { signOut } from "firebase/auth";
-import userImg from "../../assets/images/user.jpg";
+import userImg from "../../assets/images/user.png";
 import Commonbtn from "./Commonbtn.jsx";
 import useAdmin from "../../hooks/useAdmin.js";
 import Loading from "./Loading.jsx";
@@ -109,7 +109,7 @@ const Navbar = ({ setTheme, theme }) => {
                     </div>
                   </div>
                   <p className="text-xl my-2">{user?.displayName}</p>
-                  <Commonbtn>View Profile</Commonbtn>
+                  <Commonbtn><Link to={"/profile"}>View Profile</Link></Commonbtn>
                 </div>
               </div>
               <ul tabIndex="0">

@@ -22,6 +22,10 @@ import AllOrders from "./Pages/Dashboard/AllOrders.jsx";
 import ManageProducts from "./Pages/Dashboard/ManageProducts.jsx";
 import AddProduct from "./Pages/Dashboard/AddProduct.jsx";
 import EditProduct from "./Pages/Dashboard/EditProduct.jsx";
+import Profile from "./Pages/Dashboard/Profile/Profile.jsx";
+import MyProfile from "./Pages/Dashboard/Profile/MyProfile.jsx";
+import EditProfile from "./Pages/Dashboard/Profile/EditProfile.jsx";
+import Address from "./Pages/Dashboard/Profile/Address.jsx";
 function App() {
   const [theme, setTheme] = useState(false);
   useEffect(() => {
@@ -44,6 +48,18 @@ function App() {
 
         {/* protected route start */}
         <Route
+          path="/profile"
+          element={
+            <RequireAuth>
+              <Profile />
+            </RequireAuth>
+          }
+        >
+          <Route index element={<MyProfile />} />
+          <Route path="edit-profile" element={<EditProfile />} />
+          <Route path="address" element={<Address />} />
+        </Route>
+        <Route
           path="/tool-details/:id"
           element={
             <RequireAuth>
@@ -61,6 +77,7 @@ function App() {
         >
           <Route index element={<MyOrders />} />
           <Route path="my-reviews" element={<MyReviews />} />
+
           <Route path="add-review" element={<AddReview />} />
           <Route
             path="users"

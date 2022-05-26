@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 const OrderRow = ({ order, i, refetch }) => {
   const handleDelete = async (id, productId) => {
     console.log(productId);
@@ -27,7 +29,7 @@ const OrderRow = ({ order, i, refetch }) => {
           className="px-4 py-1 sm:px-12 sm:py-3 text-sm text-white rounded-md border-0 bg-neutral"
           onClick={() => handleDelete(order?._id, order?.productId)}
         >
-          Delete
+          Delete <FontAwesomeIcon icon={faTrash} />
         </button>
       </td>
     </tr>
