@@ -26,6 +26,7 @@ import Profile from "./Pages/Dashboard/Profile/Profile.jsx";
 import MyProfile from "./Pages/Dashboard/Profile/MyProfile.jsx";
 import EditProfile from "./Pages/Dashboard/Profile/EditProfile.jsx";
 import Address from "./Pages/Dashboard/Profile/Address.jsx";
+import Payment from "./Pages/Dashboard/Payment.jsx";
 function App() {
   const [theme, setTheme] = useState(false);
   useEffect(() => {
@@ -77,6 +78,7 @@ function App() {
         >
           <Route index element={<MyOrders />} />
           <Route path="my-reviews" element={<MyReviews />} />
+          <Route path="payment/:id" element={<Payment />} />
 
           <Route path="add-review" element={<AddReview />} />
           <Route

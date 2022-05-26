@@ -14,7 +14,7 @@ const Dashboard = () => {
       <div className="drawer-content lg:px-16 px-2">
         {/* <!-- Page content here --> */}
         <div className="bg-base-300 px-4 rounded-lg py-4">
-          <h1 className="text-4xl">Welcome To Dashboard</h1>
+          {/* <h1 className="text-4xl">Welcome To Dashboard</h1> */}
           <Outlet />
         </div>
         {/* <label

@@ -16,9 +16,7 @@ const EditProduct = () => {
     return <Loading />;
   }
   const onSubmit = async (data) => {
-    console.log(data);
     const image = data.image[0];
-    console.log(image);
     const formData = new FormData();
     const key = "dabd9e63b17a6bf8336a376ea2178b02";
     formData.append("image", image);

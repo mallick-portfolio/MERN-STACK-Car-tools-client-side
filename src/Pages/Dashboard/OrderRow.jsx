@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 const OrderRow = ({ order, i, refetch }) => {
   const handleDelete = async (id, productId) => {
     console.log(productId);
@@ -24,6 +25,11 @@ const OrderRow = ({ order, i, refetch }) => {
       <td>{order?.price}</td>
       <td>{order?.quantity}</td>
       <td>{order?.status}</td>
+      <td>
+        <button className="btn btn-primary btn-sm">
+          <Link to={`/dashboard/payment/${order._id}`}>Pay</Link>
+        </button>
+      </td>
       <td>
         <button
           className="px-2 py-1 text-sm text-white rounded-md buser-0 bg-success"
