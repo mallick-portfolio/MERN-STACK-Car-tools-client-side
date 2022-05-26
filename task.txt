@@ -53,7 +53,7 @@ We are a manufacturer. We are looking for a front-end web developer to build a w
 
 9. On the `My Orders` page, there will be a payment button for each order. The user has not paid yet. The pay button will take the user to the payment page. The user should be able to pay by using a credit card here. The payment page will display order details. Once the payment is completed for an order, the user will see the transaction id for that order on the my orders page.
 
-10. On the `Add A Review` page, users should be able to add a review. A review will contain ratings ( a number 1 to 5 and a description). That review will appear on the home page reviews section. Right now, you will see every review on the home page. There is no limit on the number of reviews or the order of the review.
+10. On the `Add A Review` page, users should be able to add a review. A review will contain ratings ( a number 1 to 5 and a description). That review will appear on the home page reviews section. Right now, you will see every review on the home page. There is no limit on the number of reviews or the order of the review.-----------
 
 
 
@@ -61,9 +61,9 @@ We are a manufacturer. We are looking for a front-end web developer to build a w
 
 
 
-12. If an admin logs in, they will not see the options that a user sees except `My Profile`. This means an admin will not see my orders and add a review link. Instead, an admin will see `My Profile`, `Manage All Orders`, `Add A Product`, `Make Admin`, `Manage Products`. Based on your website idea, you can change the name of these menu names. Manage products will be described in the bonus section.
+12. If an admin logs in, they will not see the options that a user sees except `My Profile`. This means an admin will not see my orders and add a review link. Instead, an admin will see `My Profile`, `Manage All Orders`, `Add A Product`, `Make Admin`, `Manage Products`. Based on your website idea, you can change the name of these menu names. Manage products will be described in the bonus section.---------
 
-13. An Admin should be able to make another user an admin. If an admin wants, they will be able to add a product on the add a product page. After adding the product, this product will appear on the `home` page. Please note, to add an image for a new product; you can just upload the image directly to the image hosting sites like imgbb, etc using API. Alternatively, you can have an input field to add the link to the image. 
+13. An Admin should be able to make another user an admin. If an admin wants, they will be able to add a product on the add a product page. After adding the product, this product will appear on the `home` page. Please note, to add an image for a new product; you can just upload the image directly to the image hosting sites like imgbb, etc using API. Alternatively, you can have an input field to add the link to the image.---------- 
 
 14. One route will be `Blogs`. This will be a open route (anyone visiting your website will see it). Please answer at least five questions on the blogs page. We recommend answering all six questions.
 
@@ -81,9 +81,21 @@ We are a manufacturer. We are looking for a front-end web developer to build a w
 
 15. Create `My Portfolio` route. In this route, you will have your name, email address, educational background, list of technologies or skills you have as a web developer. Add links of three of your projects (live website links). Adding descriptions or screenshots of your projects are optional.
 
-16. Create a meaningful 404 page (not found page). Add a meaningful image on the 404 page.------
 
+
+16. Create a meaningful 404 page (not found page). Add a meaningful image on the 404 page.------
 17. Use a database to store information. It could be mongodb atlas or any other database.--------
+
+
+
+
+
+
+
+
+
+
+
 
 ### Bonus: 
 1. Meaningful `readme.md` file on both the client and server sides containing your website name, a link to your live site. Add at least five bullet points that mention your website's different features and functionality.
@@ -100,7 +112,7 @@ We are a manufacturer. We are looking for a front-end web developer to build a w
 
 7. Implement the basic version of the `jwt` token. Upon login, you will create a jwt token and store it on the client-side, and for the necessary pages, you will send the token with the call and verify the user. Implementing 401 and 403 is optional. Ensure you have implemented `jwt` token and create token and store it on the client-side for both email/password-based authentication and social login.
 
-7. Similarly, you will need to protect the admin route and on the server side verify the admin level api requests.
+7. Similarly, you will need to protect the admin route and on the server side verify the admin level api requests.---------
 
 8. on the `Manage Products` page, an admin can delete any products. Please make sure there is a confirmation. After deleting that product will not appear on the `home` page. Use a meaningful and good-looking confirmation modal. Avoid using browser default confirm.
 

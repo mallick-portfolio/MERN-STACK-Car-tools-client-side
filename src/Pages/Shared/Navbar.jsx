@@ -6,15 +6,18 @@ import { signOut } from "firebase/auth";
 import userImg from "../../assets/images/user.jpg";
 import Commonbtn from "./Commonbtn.jsx";
 import useAdmin from "../../hooks/useAdmin.js";
+import Loading from "./Loading.jsx";
 const Navbar = ({ setTheme, theme }) => {
   const [showProfile, setShowProfile] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const logout = () => {
     signOut(auth);
   };
-  const [user] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
   const [admin] = useAdmin(user);
-
+  if (loading) {
+    return <Loading />;
+  }
   const menus = (
     <>
       <li>

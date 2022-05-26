@@ -24,23 +24,24 @@ const Login = () => {
   let navigate = useNavigate();
   let location = useLocation();
 
-  let from = location.state?.from?.pathname || "/dashboard";
+  let from = location.state?.from?.pathname || "/";
   const [token] = useToken(user || guser);
+  if (loading || sending || gloading) {
+    <Loading />;
+  }
+
+  useEffect(() => {
+    if (token) {
+      navigate(from, { replace: true });
+      toast("Login Successfully");
+    }
+  }, [from, navigate, token]);
   useEffect(() => {
     if (error || gerror) {
       toast("Your email or passowrd is not correct. Please try again");
       return navigate("/login");
     }
   }, [error, gerror, navigate]);
-  useEffect(() => {
-    if (token) {
-      toast("Login Successfully");
-      navigate(from, { replace: true });
-    }
-  }, [from, navigate, token]);
-  if (loading || sending || gloading) {
-    return <Loading />;
-  }
 
   const onSubmit = async (data) => {
     await signInWithEmailAndPassword(data.email, data.password);
