@@ -8,6 +8,7 @@ const CheckoutForm = ({ totalPrice, product }) => {
   const elements = useElements();
   const [cardError, setCardError] = useState("");
   const [success, setSuccess] = useState("");
+  // eslint-disable-next-line no-unused-vars
   const [processing, setProcessing] = useState(false);
   const [transactionId, setTransactionId] = useState("");
   const [clientSecret, setClientSecret] = useState("");
@@ -44,6 +45,7 @@ const CheckoutForm = ({ totalPrice, product }) => {
     }
 
     // Use your card Element with other Stripe.js APIs
+    // eslint-disable-next-line no-unused-vars
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: "card",
       card,

@@ -110,7 +110,9 @@ const Navbar = ({ setTheme, theme }) => {
                     </div>
                   </div>
                   <p className="text-xl my-2">{user?.displayName}</p>
-                  <Commonbtn><Link to={"/profile"}>View Profile</Link></Commonbtn>
+                  <Commonbtn>
+                    <Link to={"/profile"}>View Profile</Link>
+                  </Commonbtn>
                 </div>
               </div>
               <ul tabIndex="0">
@@ -123,7 +125,7 @@ const Navbar = ({ setTheme, theme }) => {
                 {!admin && (
                   <>
                     <li>
-                      <Link to={"/dashboard"}>My Orders</Link>
+                      <Link to={"/dashboard/my-orders"}>My Orders</Link>
                     </li>
                     <li>
                       <Link to={"/dashboard/add-review"}>Add Review</Link>
@@ -142,9 +144,7 @@ const Navbar = ({ setTheme, theme }) => {
                       <Link to={"/dashboard/orders"}>Orders</Link>
                     </li>
                     <li>
-                      <Link to={"/dashboard/add-product"}>
-                        Add Product
-                      </Link>
+                      <Link to={"/dashboard/add-product"}>Add Product</Link>
                     </li>
                     <li>
                       <Link to={"/dashboard/manage-products"}>

@@ -30,7 +30,7 @@ const Dashboard = () => {
           {!admin && (
             <>
               <li>
-                <Link className="font-bold" to={"/dashboard"}>
+                <Link className="font-bold" to={"/dashboard/my-orders"}>
                   My Orders
                 </Link>
               </li>

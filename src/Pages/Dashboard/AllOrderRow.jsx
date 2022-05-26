@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { toast } from "react-toastify";
 const AllOrderRow = ({ i, order, refetch }) => {
+  console.log(order)
   const { register, handleSubmit } = useForm();
   const onSubmit = async (data) => {
     axios

@@ -25,7 +25,7 @@ const Login = () => {
   let location = useLocation();
 
   const [token] = useToken(user || guser);
-  let from = location.state?.from?.pathname || "/profile";
+  let from = location.state?.from?.pathname || "/";
 
   useEffect(() => {
     if (token) {

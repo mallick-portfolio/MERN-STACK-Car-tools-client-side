@@ -28,7 +28,7 @@ const CheckOutForm = ({ tool }) => {
       .then((res) => {
         if(res.data.acknowledged){
           toast('Order Successfully.')
-          navigate('/dashboard')
+          navigate('/dashboard/my-orders')
         }
       });
   };

@@ -27,6 +27,7 @@ import MyProfile from "./Pages/Dashboard/Profile/MyProfile.jsx";
 import EditProfile from "./Pages/Dashboard/Profile/EditProfile.jsx";
 import Address from "./Pages/Dashboard/Profile/Address.jsx";
 import Payment from "./Pages/Dashboard/Payment.jsx";
+import Welcome from "./Pages/Shared/Welcome.jsx";
 function App() {
   const [theme, setTheme] = useState(false);
   useEffect(() => {
@@ -76,7 +77,8 @@ function App() {
             </RequireAuth>
           }
         >
-          <Route index element={<MyOrders />} />
+          <Route index element={<Welcome />} />
+          <Route path="my-orders" element={<MyOrders />} />
           <Route path="my-reviews" element={<MyReviews />} />
           <Route path="payment/:id" element={<Payment />} />
 
