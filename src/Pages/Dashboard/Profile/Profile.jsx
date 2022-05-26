@@ -5,7 +5,7 @@ const Profile = () => {
   return (
     <div className="drawer drawer-mobile lg:px-16 pb-8 text-accent mx-auto">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content lg:px-16 px-2">
+      <div className="drawer-content  lg:px-16 px-2">
         {/* <!-- Page content here --> */}
         <div className="bg-base-300 px-4 rounded-lg py-4">
           <Outlet />
@@ -17,7 +17,7 @@ const Profile = () => {
           Open drawer
         </label> */}
       </div>
-      <div className={`drawer-side rounded-lg hidden `}>
+      <div className={`drawer-side rounded-lg`}>
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
         <ul className="menu p-4 overflow-y-auto w-60 bg-base-300 text-base-content">
           <li>

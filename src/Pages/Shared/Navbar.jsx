@@ -14,6 +14,7 @@ const Navbar = ({ setTheme, theme }) => {
     signOut(auth);
   };
   const [user, loading] = useAuthState(auth);
+
   const [admin] = useAdmin(user);
   if (loading) {
     return <Loading />;
