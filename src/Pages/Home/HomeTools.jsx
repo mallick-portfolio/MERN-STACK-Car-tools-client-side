@@ -13,7 +13,7 @@ const HomeTools = () => {
   return (
     <section className="bg-base-100 lg:py-12 lg:px-16 mx-auto text-accent">
       <SectionTitle title={"Our Best Tools"} />
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {tools &&
           tools.map((tool) => <SingleTool key={tool._id} tool={tool} />)}
       </div>

@@ -29,7 +29,7 @@ import Address from "./Pages/Dashboard/Profile/Address.jsx";
 import Payment from "./Pages/Dashboard/Payment.jsx";
 import Welcome from "./Pages/Shared/Welcome.jsx";
 function App() {
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState(true);
   useEffect(() => {
     themeChange(false);
   }, []);
@@ -41,7 +41,7 @@ function App() {
   return (
     <div
       className="overflow-hidden"
-      data-theme={`${!theme ? "light" : "dark"}`}
+      data-theme={`${theme ? "light" : "dark"}`}
     >
       <Navbar theme={theme} setTheme={setTheme} />
       <Routes>

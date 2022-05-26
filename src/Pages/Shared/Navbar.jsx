@@ -87,6 +87,14 @@ const Navbar = ({ setTheme, theme }) => {
       </div>
       {user && (
         <div className="navbar-end">
+          <div>
+            <label
+              htmlFor="my-drawer-2"
+              className="btn bg-primary btn-sm lg:hidden"
+            >
+              Profile
+            </label>
+          </div>
           <div className="dropdown dropdown-end">
             <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">

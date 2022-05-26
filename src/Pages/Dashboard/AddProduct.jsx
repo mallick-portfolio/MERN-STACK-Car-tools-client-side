@@ -112,8 +112,8 @@ const AddProduct = () => {
           <div>
             <input
               type="submit"
-              value="Submit"
-              className="px-4 sm:px-12 sm:py-3 text-sm text-white rounded-md border-0 bg-neutral cursor-pointer"
+              value="Add"
+              className="px-4 py-1 mb-3 sm:mb-0 sm:px-12 sm:py-3 text-sm text-white rounded-md border-0 bg-neutral cursor-pointer"
             />
           </div>
           <Commonbtn>

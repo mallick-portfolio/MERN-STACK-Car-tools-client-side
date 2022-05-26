@@ -8,48 +8,51 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Commonbtn from "../Shared/Commonbtn.jsx";
 import { Link } from "react-router-dom";
-
+/* 
+https://i.ibb.co/qdpvqqy/slider-1.webp
+https://i.ibb.co/6B35QM1/slider-2.webp
+*/
 const Banner = () => {
   const items = [
     {
       _id: 1,
       subtitle: "Discount Up To 40% Off",
-      headtitle: "Best Quality",
-      headsubtitle: "Gardening Tools",
+      headtitle: "WHEELS & TIRES ",
+      headsubtitle: "COLLECTIONS",
       btntext: "Shop Now",
-      img: "https://prestashop.mahardhi.com/MT07/greensgarden/01/modules/mt_homeslider/images/banner-1.jpg",
+      img: "https://i.ibb.co/qdpvqqy/slider-1.webp",
     },
     {
       _id: 2,
-      subtitle: "Shipping & Cash On Delivery Available",
-      headtitle: "Latest Garden",
-      headsubtitle: "Gardening Tools",
+      subtitle: "NEW TECHNOLOGY & BUILD",
+      headtitle: "WHEELS & TIRES",
+      headsubtitle: "COLLECTIONS",
       btntext: "Shop Now",
-      img: "https://prestashop.mahardhi.com/MT07/greensgarden/01/modules/mt_homeslider/images/banner-2.jpg",
+      img: "https://i.ibb.co/6B35QM1/slider-2.webp",
     },
     {
       _id: 3,
       subtitle: "Discount Up To 40% Off",
-      headtitle: "Best Quality",
-      headsubtitle: "Gardening Tools",
+      headtitle: "WHEELS & TIRES ",
+      headsubtitle: "COLLECTIONS",
       btntext: "Shop Now",
-      img: "https://prestashop.mahardhi.com/MT07/greensgarden/01/modules/mt_homeslider/images/banner-1.jpg",
+      img: "https://i.ibb.co/qdpvqqy/slider-1.webp",
     },
     {
       _id: 4,
-      subtitle: "Shipping & Cash On Delivery Available",
-      headtitle: "Latest Garden",
-      headsubtitle: "Gardening Tools",
+      subtitle: "NEW TECHNOLOGY & BUILD",
+      headtitle: "WHEELS & TIRES",
+      headsubtitle: "COLLECTIONS",
       btntext: "Shop Now",
-      img: "https://prestashop.mahardhi.com/MT07/greensgarden/01/modules/mt_homeslider/images/banner-2.jpg",
+      img: "https://i.ibb.co/6B35QM1/slider-2.webp",
     },
     {
       _id: 5,
       subtitle: "Discount Up To 40% Off",
-      headtitle: "Best Quality",
-      headsubtitle: "Gardening Tools",
+      headtitle: "WHEELS & TIRES ",
+      headsubtitle: "COLLECTIONS",
       btntext: "Shop Now",
-      img: "https://prestashop.mahardhi.com/MT07/greensgarden/01/modules/mt_homeslider/images/banner-1.jpg",
+      img: "https://i.ibb.co/qdpvqqy/slider-1.webp",
     },
   ];
   return (
@@ -67,7 +70,7 @@ const Banner = () => {
       >
         {items.map((item) => (
           <SwiperSlide key={item._id}>
-            <div className="relative text-info">
+            <div className="relative text-white">
               <div>
                 <img src={item.img} alt="" />
               </div>
@@ -80,7 +83,7 @@ const Banner = () => {
                   <br />
                   {item.headsubtitle}
                 </h1>
-                <Link to={"/login"}>
+                <Link to={"/shop"}>
                   <Commonbtn>{item.btntext}</Commonbtn>
                 </Link>
               </div>
