@@ -19,21 +19,21 @@ const Profile = () => {
       </div>
       <div className={`drawer-side rounded-lg`}>
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-        <ul className="menu p-4 overflow-y-auto w-60 bg-base-300 text-base-content">
+        <ul className="menu p-4 text-accent overflow-y-auto w-60 bg-base-300">
           <li>
-            <Link to={"/profile"}>My Profile</Link>
+            <Link className="font-bold" to={"/profile"}>My Profile</Link>
           </li>
           <li>
-            <Link to={"/profile/address"}>Address</Link>
+            <Link className="font-bold" to={"/profile/address"}>Address</Link>
           </li>
           <li>
-            <Link to={"/profile/address"}>Education</Link>
+            <Link className="font-bold" to={"/profile/address"}>Education</Link>
           </li>
           <li>
-            <Link to={"/profile/address"}>Job Profile</Link>
+            <Link className="font-bold" to={"/profile/address"}>Job Profile</Link>
           </li>
           <li>
-            <Link to={"/profile/address"}>Job Experience</Link>
+            <Link className="font-bold" to={"/profile/address"}>Job Experience</Link>
           </li>
         </ul>
       </div>
