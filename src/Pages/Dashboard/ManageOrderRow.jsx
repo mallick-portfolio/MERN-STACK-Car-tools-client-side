@@ -2,9 +2,21 @@ import { faPenToSquare, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
-
-const ManageOrderRow = ({ product, i }) => {
-
+import axios from "axios";
+import { toast } from "react-toastify";
+const ManageOrderRow = ({ product, i, refetch }) => {
+  const handleDelete = async (id) => {
+    await axios
+      .delete(`http://localhost:5000/admin/product/${id}`, {
+        method: "DELETE",
+      })
+      .then((res) => {
+        if (res.data.acknowledged) {
+          toast("Deleted Successfull");
+          refetch();
+        }
+      });
+  };
 
   return (
     <tr>
@@ -18,7 +30,10 @@ const ManageOrderRow = ({ product, i }) => {
             <FontAwesomeIcon icon={faPenToSquare} />
           </Link>
         </button>
-        <button className="input input-bordered text-white rounded-md border-0 bg-neutral cursor-pointer btn-sm mx-2">
+        <button
+          onClick={() => handleDelete(product._id)}
+          className="input input-bordered text-white rounded-md border-0 bg-neutral cursor-pointer btn-sm mx-2"
+        >
           <FontAwesomeIcon icon={faTrash} />
         </button>
       </td>

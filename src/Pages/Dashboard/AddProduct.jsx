@@ -1,14 +1,12 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import Commonbtn from "../Shared/Commonbtn.jsx";
 const AddProduct = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const key = "dabd9e63b17a6bf8336a376ea2178b02";
-  const {
-    register,
-    handleSubmit,
-  } = useForm();
+  const { register, handleSubmit } = useForm();
   const onSubmit = async (data, e) => {
     const image = data.image[0];
     const formData = new FormData();
@@ -34,7 +32,7 @@ const AddProduct = () => {
             .then((added) => {
               if (added.insertedId) {
                 toast.success("Product added successfully");
-                navigate('/dashboard/manage-products')
+                navigate("/dashboard/manage-products");
               } else {
                 toast.error("Failed to add the product");
               }
@@ -110,12 +108,17 @@ const AddProduct = () => {
           />
         </div>
 
-        <div>
-          <input
-            type="submit"
-            value="Submit"
-            className="px-4 sm:px-12 sm:py-3 text-sm text-white rounded-md border-0 bg-neutral cursor-pointer"
-          />
+        <div className="sm:flex justify-between items-center">
+          <div>
+            <input
+              type="submit"
+              value="Submit"
+              className="px-4 sm:px-12 sm:py-3 text-sm text-white rounded-md border-0 bg-neutral cursor-pointer"
+            />
+          </div>
+          <Commonbtn>
+            <Link to={"/dashboard/manage-products"}>Go Manage Product</Link>
+          </Commonbtn>
         </div>
       </form>
     </div>
