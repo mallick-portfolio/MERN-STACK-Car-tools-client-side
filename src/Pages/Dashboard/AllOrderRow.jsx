@@ -38,7 +38,7 @@ const AllOrderRow = ({ i, order, refetch }) => {
           <input
             type="submit"
             placeholder="Type here"
-            class="input input-bordered text-white rounded-md border-0 bg-neutral cursor-pointer btn-sm mx-2"
+            className="input input-bordered text-white rounded-md border-0 bg-neutral cursor-pointer btn-sm mx-2"
           />
         </form>
       </td>

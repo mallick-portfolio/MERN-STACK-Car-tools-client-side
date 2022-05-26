@@ -35,12 +35,15 @@ const EditProfile = () => {
   };
   return (
     <div className="py-4 px-4 text-accent">
-      <CommonProfile title="My Profile" />
+      <CommonProfile
+        title="My Profile"
+        path={`/profile/edit-profile/${id}`}
+      />
 
       <div className="sm:flex w-full ">
         <div className="w-40 text-center">
-          <div class="avatar">
-            <div class="w-20">
+          <div className="avatar">
+            <div className="w-20">
               <img
                 src={updateProfile.image ? updateProfile.image : userImg}
                 alt=""
