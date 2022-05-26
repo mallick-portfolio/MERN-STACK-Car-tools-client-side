@@ -24,11 +24,8 @@ const Login = () => {
   let navigate = useNavigate();
   let location = useLocation();
 
-  let from = location.state?.from?.pathname || "/";
   const [token] = useToken(user || guser);
-  if (loading || sending || gloading) {
-    <Loading />;
-  }
+  let from = location.state?.from?.pathname || "/";
 
   useEffect(() => {
     if (token) {
@@ -42,6 +39,9 @@ const Login = () => {
       return navigate("/login");
     }
   }, [error, gerror, navigate]);
+  if (loading || sending || gloading) {
+    return <Loading />;
+  }
 
   const onSubmit = async (data) => {
     await signInWithEmailAndPassword(data.email, data.password);

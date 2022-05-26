@@ -1,15 +1,13 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import auth from "../../firebase.init.js";
 import useAdmin from "../../hooks/useAdmin.js";
 
 const Dashboard = () => {
   const [user] = useAuthState(auth);
   const [admin] = useAdmin(user);
-  const location = useLocation();
-  const path = location.pathname === "/dashboard/profile";
-  console.log(path);
+ 
   return (
     <div className="drawer drawer-mobile lg:px-16 pb-8 text-accent mx-auto">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -58,9 +56,6 @@ const Dashboard = () => {
               </li>
             </>
           )}
-          <li>
-            <a>My Profile</a>
-          </li>
         </ul>
       </div>
     </div>

@@ -56,7 +56,7 @@ function App() {
           }
         >
           <Route index element={<MyProfile />} />
-          <Route path="edit-profile" element={<EditProfile />} />
+          <Route path="edit-profile/:id" element={<EditProfile />} />
           <Route path="address" element={<Address />} />
         </Route>
         <Route

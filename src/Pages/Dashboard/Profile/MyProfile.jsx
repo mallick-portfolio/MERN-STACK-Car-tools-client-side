@@ -10,7 +10,6 @@ const MyProfile = () => {
   const [user, loading] = useAuthState(auth);
   const {
     isLoading,
-    error,
     data: userProfile,
   } = useQuery("userProfile", () =>
     fetch(`http://localhost:5000/profile/user/${user?.email}`, {
@@ -37,7 +36,7 @@ const MyProfile = () => {
           </div>
           <div>
             <button className="px-4 py-2 my-2 text-sm text-white rounded-full border-0 bg-neutral">
-              <Link to={"/profile/edit-profile"}>Edit Profile</Link>
+              <Link to={`/profile/edit-profile/${userProfile?._id}`}>Edit Profile</Link>
             </button>
           </div>
         </div>
