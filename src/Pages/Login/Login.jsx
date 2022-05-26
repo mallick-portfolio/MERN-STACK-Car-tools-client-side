@@ -25,7 +25,7 @@ const Login = () => {
   let location = useLocation();
 
   const [token] = useToken(user || guser);
-  let from = location.state?.from?.pathname || "/";
+  let from = location.state?.from?.pathname || "/profile";
 
   useEffect(() => {
     if (token) {
@@ -47,7 +47,7 @@ const Login = () => {
     await signInWithEmailAndPassword(data.email, data.password);
   };
   return (
-    <div className="min-h-screen flex justify-center items-center">
+    <div className="min-h-screen text-accent flex justify-center items-center">
       <div className="lg:w-1/3 px-4 py-6 rounded-md shadow-2xl">
         <form onSubmit={handleSubmit(onSubmit)}>
           <h3 className="text-center text-2xl mb-3">Login</h3>
@@ -86,20 +86,20 @@ const Login = () => {
             }}
             type={"submit"}
             value="Forgot Password ?"
-            className="text-sm cursor-pointer text-secondary my-4"
+            className="text-sm cursor-pointer text-accent my-4"
           />
 
           <div className="mb-2">
             <input
               type="submit"
               value={"Submit"}
-              className="btn w-full bg-accent border-0"
+              className="btn-primary btn w-full  border-0"
             />
           </div>
           <div className="mb-2 text-center">
             <p>
               New to Village Garden?{" "}
-              <Link to={"/signup"} className="text-secondary cursor-pointer">
+              <Link to={"/signup"} className="text-neutral cursor-pointer">
                 Register
               </Link>
             </p>
@@ -109,7 +109,7 @@ const Login = () => {
         <div>
           <button
             onClick={() => signInWithGoogle()}
-            className="btn text-center bg-white text-neutral border-black hover:text-white w-full"
+            className="py-3 text-sm text-white rounded-md border-0 bg-neutral w-full"
           >
             CONTINUE WITH GOOGLE
           </button>

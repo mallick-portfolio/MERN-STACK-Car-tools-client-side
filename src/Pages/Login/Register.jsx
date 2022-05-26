@@ -25,7 +25,7 @@ const Register = () => {
   const [token] = useToken(user || guser);
   useEffect(() => {
     if (error || gerror || upError) {
-      console.log(error, gerror, upError)
+      console.log(error, gerror, upError);
       toast("Your Register Failed. Please try again");
       return navigate("/signup");
     }
@@ -46,7 +46,7 @@ const Register = () => {
   };
 
   return (
-    <div className="flex justify-center mx-10 items-center">
+    <div className="flex justify-center mx-10 text-accent items-center">
       <div className="lg:w-1/3 px-4 py-6 rounded-md shadow-2xl">
         <form onSubmit={handleSubmit(onSubmit)}>
           <h3 className="text-center text-2xl mb-3">Sign Up</h3>
@@ -136,7 +136,7 @@ const Register = () => {
           <div className="mb-1 text-center">
             <p>
               Already Have an Account
-              <Link to={"/login"} className="text-secondary cursor-pointer">
+              <Link to={"/login"} className="text-neutral cursor-pointer">
                 Login Now
               </Link>
             </p>
@@ -146,7 +146,7 @@ const Register = () => {
         <div>
           <button
             onClick={() => signInWithGoogle()}
-            className="btn text-center bg-white text-neutral border-black hover:text-white w-full"
+            className="py-3 text-sm  text-white rounded-md border-0 bg-neutral w-full"
           >
             CONTINUE WITH GOOGLE
           </button>
