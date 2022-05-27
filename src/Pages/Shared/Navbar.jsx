@@ -77,7 +77,7 @@ const Navbar = ({ setTheme, theme }) => {
           </ul>
         </div>
         <Link to={"/"} className="btn btn-ghost normal-case text-xl">
-          GHome
+          Takus
         </Link>
       </div>
       <div

@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faBan, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 const OrderRow = ({ order, i, refetch }) => {
   console.log(order);
@@ -36,12 +36,19 @@ const OrderRow = ({ order, i, refetch }) => {
         )}
       </td>
       <td>
-        {!order.transactionId && (
+        {!order.transactionId ? (
           <button
             className="px-2 py-1 text-sm text-white rounded-md buser-0 bg-success"
             onClick={() => handleDelete(order?._id, order?.productId)}
           >
-            Delete <FontAwesomeIcon icon={faTrash} />
+             <FontAwesomeIcon icon={faTrash} />
+          </button>
+        ) : (
+          <button
+            className="px-2 py-1 text-sm text-white rounded-md buser-0 bg-neutral"
+            onClick={() => handleDelete(order?._id, order?.productId)}
+          >
+             <FontAwesomeIcon icon={faBan} />
           </button>
         )}
       </td>
