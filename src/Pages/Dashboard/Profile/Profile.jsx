@@ -30,10 +30,10 @@ const Profile = () => {
             <Link className="font-bold" to={"/profile/education"}>Education</Link>
           </li>
           <li>
-            <Link className="font-bold" to={"/profile/address"}>Job Profile</Link>
+            <Link className="font-bold" to={"/profile/job-profile"}>Job Profile</Link>
           </li>
           <li>
-            <Link className="font-bold" to={"/profile/address"}>Job Experience</Link>
+            <Link className="font-bold" to={"/profile/job-experience"}>Job Experience</Link>
           </li>
         </ul>
       </div>

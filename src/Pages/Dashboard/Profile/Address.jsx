@@ -4,7 +4,7 @@ import CommonProfile from "../../Shared/CommonProfile.jsx";
 const Address = () => {
   return (
     <div className="py-4 px-4 text-accent">
-      <CommonProfile title={"Address"} path="/profile/address" />
+      <CommonProfile title={"Address"} path={`/profile/edit-address/`} />
       <div className="sm:flex w-full">
         <div className="w-full my-5">
           <h4 className="text-xl font-bold text-neutral">Present Address</h4>
