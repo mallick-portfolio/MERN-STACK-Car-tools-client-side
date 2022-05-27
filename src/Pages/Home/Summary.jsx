@@ -2,35 +2,37 @@ import React from "react";
 import SummaryCard from "./SummaryCard.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChartLine, faDeleteLeft, faFlagCheckered, faPeopleGroup, faStar } from "@fortawesome/free-solid-svg-icons";
 AOS.init();
 const Summary = () => {
   const summarys = [
     {
       _id: 1,
-      title: "Countries",
-      icon: "faFlag",
+      title: "Anual Revinue",
+      icon: <><FontAwesomeIcon className={"text-4xl"} icon={faChartLine} /></>,
       count: 94,
-      ext: "",
+      ext: "M+",
     },
     {
       _id: 2,
-      title: "Complete Projects",
-      icon: "faFlag",
-      count: 525,
-      ext: "+",
+      title: "Connect Across People",
+      icon: <><FontAwesomeIcon className={"text-4xl"} icon={faPeopleGroup} /></>,
+      count: 25,
+      ext: "M+",
     },
     {
       _id: 3,
-      title: "Happy Client",
-      icon: "faFlag",
-      count: 274,
+      title: "Country",
+      icon: <><FontAwesomeIcon className={"text-4xl"} icon={faFlagCheckered} /></>,
+      count: 74,
       ext: "+",
     },
     {
       _id: 4,
       title: "Feedbacks",
-      icon: "faFlag",
+      icon: <><FontAwesomeIcon className={"text-4xl"} icon={faStar} /></>,
       count: 530,
       ext: "+",
     },

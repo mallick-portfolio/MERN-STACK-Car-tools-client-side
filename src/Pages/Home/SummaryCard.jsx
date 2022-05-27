@@ -1,5 +1,3 @@
-import { faFlag } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import CountUp from "react-countup";
 
@@ -10,7 +8,7 @@ const SummaryCard = ({ summary }) => {
     <div className="stats py-4 shadow-lg text-accent bg-base-300 text-center">
       <div className="stat">
         <div className="stat-title">
-          <FontAwesomeIcon className="text-4xl " icon={faFlag} />
+          {icon}
         </div>
         <div className="stat-value">
           <CountUp
