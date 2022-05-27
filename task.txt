@@ -2,7 +2,7 @@
 We are a manufacturer. We are looking for a front-end web developer to build a website for us. 
 
 ### Website Purpose:
-1. Your website has to be a `tools manufacturer`. The tool manufacturers could manufacture carpentry tools, masonry tools, electric tools, metalwork tools, or any tool. Some examples of tools could be a hammer, drill machine, screwdriver, wrench, Pliers, Measuring Tape, Chisel, Soldering Iron, shovel, electric saw, hacksaw, paint roller, paintbrush, sandpaper, nut, bolts, drill bit, clamp, workbench, nail gun, glue gun, etc. 
+1. Your website has to be a `tools manufacturer`. The tool manufacturers could manufacture carpentry tools, masonry tools, electric tools, metalwork tools, or any tool. Some examples of tools could be a hammer, drill machine, screwdriver, wrench, Pliers, Measuring Tape, Chisel, Soldering Iron, shovel, electric saw, hacksaw, paint roller, paintbrush, sandpaper, nut, bolts, drill bit, clamp, workbench, nail gun, glue gun, etc. ----
 
 2. Alternatively, your website could be a `parts manufacturer`. A part will produce parts of a machine or a device. Examples of parts manufacturers could be car parts manufacturers, Motor Bike parts manufacturers, Bicycle parts manufacturers, camera parts manufacturers, refrigerator parts manufacturers, air conditioner parts manufacturers, table fan parts manufacturers, Clock parts manufacturers, TV parts manufacturers, microwave oven parts manufacturers, computer parts manufacturer, etc. 
 
@@ -49,8 +49,8 @@ We are a manufacturer. We are looking for a front-end web developer to build a w
 
 
 
-2. Add two different sections on the home page and the 6 sections mentioned above. Tips: This is the place to shine. Add something different and unique to make your website looks different than others. And Make them relevant to your website. And make these two sections meaningful.
-9. On the `My Orders` page, there will be a payment button for each order. The user has not paid yet. The pay button will take the user to the payment page. The user should be able to pay by using a credit card here. The payment page will display order details. Once the payment is completed for an order, the user will see the transaction id for that order on the my orders page.
+2. Add two different sections on the home page and the 6 sections mentioned above. Tips: This is the place to shine. Add something different and unique to make your website looks different than others. And Make them relevant to your website. And make these two sections meaningful.-----
+9. On the `My Orders` page, there will be a payment button for each order. The user has not paid yet. The pay button will take the user to the payment page. The user should be able to pay by using a credit card here. The payment page will display order details. Once the payment is completed for an order, the user will see the transaction id for that order on the my orders page.--------
 
 
 
@@ -73,12 +73,12 @@ We are a manufacturer. We are looking for a front-end web developer to build a w
 
     14.6 What is a unit test? Why should write unit tests?
 
-15. Create `My Portfolio` route. In this route, you will have your name, email address, educational background, list of technologies or skills you have as a web developer. Add links of three of your projects (live website links). Adding descriptions or screenshots of your projects are optional.
+15. Create `My Portfolio` route. In this route, you will have your name, email address, educational background, list of technologies or skills you have as a web developer. Add links of three of your projects (live website links). Adding descriptions or screenshots of your projects are optional.+++++++++++++++
 
 
 
-11. The `My profile` route will be available for every user (admin or non-admin. everyone will see this link). The user will see their name and email address on this profile in this link. Also, this page will have fields to add fields like education, location (city/district), phone number, LinkedIn profile link, etc. And users will be able to save this information in the database. Also, the user will be able to update this information.==========
-8. On `My Orders` page, the logged-in user will see only their orders. If the user wants, they should be able to cancel (canceling is just deleting the order) any order that is not paid yet. Ask for a confirmation message before canceling an order. Do not use browser default confirm. Instead, use a good-looking modal. Please note users will not see the cancel option for any paid order.===========
+11. The `My profile` route will be available for every user (admin or non-admin. everyone will see this link). The user will see their name and email address on this profile in this link. Also, this page will have fields to add fields like education, location (city/district), phone number, LinkedIn profile link, etc. And users will be able to save this information in the database. Also, the user will be able to update this information.------------
+8. On `My Orders` page, the logged-in user will see only their orders. If the user wants, they should be able to cancel (canceling is just deleting the order) any order that is not paid yet. Ask for a confirmation message before canceling an order. Do not use browser default confirm. Instead, use a good-looking modal. Please note users will not see the cancel option for any paid order.---------------
 
 
 
@@ -93,7 +93,7 @@ We are a manufacturer. We are looking for a front-end web developer to build a w
 
 
 ### Bonus: 
-1. Meaningful `readme.md` file on both the client and server sides containing your website name, a link to your live site. Add at least five bullet points that mention your website's different features and functionality.
+1. Meaningful `readme.md` file on both the client and server sides containing your website name, a link to your live site. Add at least five bullet points that mention your website's different features and functionality.+++++++++
 
 2. At least 15 meaningful GitHub commits for the client-side and at least 10 meaningful commits for the server-side repository. ---------
 
@@ -108,7 +108,7 @@ We are a manufacturer. We are looking for a front-end web developer to build a w
 
 7. Similarly, you will need to protect the admin route and on the server side verify the admin level api requests.---------
 
-8. on the `Manage Products` page, an admin can delete any products. Please make sure there is a confirmation. After deleting that product will not appear on the `home` page. Use a meaningful and good-looking confirmation modal. Avoid using browser default confirm.
+8. on the `Manage Products` page, an admin can delete any products. Please make sure there is a confirmation. After deleting that product will not appear on the `home` page. Use a meaningful and good-looking confirmation modal. Avoid using browser default confirm.---------
 
 9. Use `react query` for at least one API call. ------------
 

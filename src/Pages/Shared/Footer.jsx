@@ -13,7 +13,7 @@ const Footer = () => {
     data-aos-duration="2000">
       <div className="footer p-10 px-16 mx-auto bg-base-200 text-base-content">
         <div>
-          <img className="w-40 animate-spin" src={logo} alt="" />
+          <img className="w-32 animate-spin" src={logo} alt="" />
           <p>
             Takus Industries Ltd.
             <br />
@@ -41,7 +41,7 @@ const Footer = () => {
           <a className="link link-hover">Cookie policy</a>
         </div>
       </div>
-      <div className="footer items-center lg:px-16 p-4 bg-base-100 text-neutral-content">
+      <div className="footer p-10 px-16 mx-auto bg-base-300 text-base-content">
         <div className="items-center grid-flow-col">
           <p>Copyright © 2022 - All right reserved Tamal Mallick</p>
         </div>

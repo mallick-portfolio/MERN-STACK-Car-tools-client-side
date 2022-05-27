@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { toast } from "react-toastify";
 const AllOrderRow = ({ i, order, refetch }) => {
-  console.log(order)
   const { register, handleSubmit } = useForm();
   const onSubmit = async (data) => {
     axios
@@ -24,24 +23,28 @@ const AllOrderRow = ({ i, order, refetch }) => {
       <td>{order?.price}</td>
       <td>{order?.quantity}</td>
       <td>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <select
-            {...register("status", {
-              value: order?.status,
-            })}
-            className="select select-sm select-bordered text-accent border-neutral"
-          >
-            <option value={"Pending"}>Pending</option>
-            <option value={"Processing"}>Processing</option>
-            <option value={"Deleveried"}>Deleveried</option>
-            <option value={"Completed"}>Completed</option>
-          </select>
-          <input
-            type="submit"
-            placeholder="Type here"
-            className="input input-bordered text-white rounded-md border-0 bg-neutral cursor-pointer btn-sm mx-2"
-          />
-        </form>
+        {order?.transactionId ? (
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <select
+              {...register("status", {
+                value: order?.status,
+              })}
+              className="select select-sm select-bordered text-accent border-neutral"
+            >
+              <option value={"Pending"}>Pending</option>
+              <option value={"Processing"}>Processing</option>
+              <option value={"Deleveried"}>Deleveried</option>
+              <option value={"Completed"}>Completed</option>
+            </select>
+            <input
+              type="submit"
+              placeholder="Type here"
+              className="input input-bordered text-white rounded-md border-0 bg-neutral cursor-pointer btn-sm mx-2"
+            />
+          </form>
+        ) : (
+          <p className="text-neutral text-xl">Unpaid</p>
+        )}
       </td>
     </tr>
   );
