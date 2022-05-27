@@ -4,7 +4,7 @@ import React from "react";
 
 const SectionTitle = ({ title }) => {
   return (
-    <div className="py-5">
+    <div className="py-3 mb-5">
       <h1 className="text-center uppercase text-neutral text-3xl font-bold  leading-none tracking-normal">
         {title}
       </h1>

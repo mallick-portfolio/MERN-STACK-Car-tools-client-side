@@ -33,6 +33,13 @@ const UserRow = ({ u, i, refetch, setItem }) => {
             Make Admin
           </button>
         )}
+        {u?.role === 'admin' && (
+          <span
+            className="px-2 py-1 text-sm text-white rounded-md buser-0 bg-neutral"
+          >
+            Admin
+          </span>
+        )}
         {u?.role !== 'admin' && (
           <label
           onClick={() => setItem(u)}

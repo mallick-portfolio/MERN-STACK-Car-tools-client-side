@@ -47,7 +47,7 @@ const Partner = () => {
         slidesPerView={5}
         spaceBetween={30}
         loop={true}
-        pagination={true}
+        // pagination={true}
         modules={[Pagination, Autoplay]}
         className="mySwiper"
       >
