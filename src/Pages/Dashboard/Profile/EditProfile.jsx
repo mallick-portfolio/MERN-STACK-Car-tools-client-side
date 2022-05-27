@@ -52,33 +52,33 @@ const EditProfile = () => {
             </div>
           </div>
           {/* <div>
-            <button className="px-4 py-2 my-2 text-xl text-white rounded-full border-0 bg-neutral">
+            <button className="px-4 py-2 my-2 sm:text-xl text-white rounded-full border-0 bg-neutral">
               Upload image
             </button>
           </div> */}
           <div>
-            <h3 className="text-xl font-bold">{updateProfile?.name}</h3>
+            <h3 className="sm:text-xl font-bold">{updateProfile?.name}</h3>
           </div>
         </div>
-        <div className="pl-5 w-full">
+        <div className="sm:pl-5 w-full">
           <div className="flex my-8 text-accent justify-center items-center">
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="w-full px-8 py-4 rounded-lg"
+              className="w-full sm:px-8 sm:py-4 px-2 py-2 rounded-lg"
             >
               <div className="mb-1">
-                <p className="text-xl mb-1">Full name</p>
+                <p className="sm:text-xl mb-1">Full name</p>
                 <input
                   {...register("name", {
                     value: updateProfile?.name,
                   })}
                   placeholder="Full name"
-                  className="input rounded-full input-bordered text-xl w-full"
+                  className="input rounded-full input-bordered sm:text-xl w-full"
                 />
               </div>
               <div className="mb-1">
-                <p className="text-xl mb-1">
-                  Email Address (Email Address cannot be changed)
+                <p className="sm:text-xl mb-1">
+                  Email Address
                 </p>
                 <input
                   readOnly
@@ -86,11 +86,11 @@ const EditProfile = () => {
                     value: updateProfile?.email,
                   })}
                   placeholder="Email Address"
-                  className="input rounded-full input-bordered text-xl w-full"
+                  className="input rounded-full input-bordered sm:text-xl w-full"
                 />
               </div>
               <div className="mb-1">
-                <p className="text-xl mb-1">Phone</p>
+                <p className="sm:text-xl mb-1">Phone</p>
                 <input
                   {...register("phone", {
                     value: updateProfile?.phone,
@@ -105,7 +105,7 @@ const EditProfile = () => {
                     },
                   })}
                   placeholder="Phone Number"
-                  className="input rounded-full input-bordered text-xl w-full"
+                  className="input rounded-full input-bordered sm:text-xl w-full"
                 />
                 {errors.phone && (
                   <p className="text-red-500">{errors.phone?.message}</p>
@@ -117,7 +117,7 @@ const EditProfile = () => {
                   <input
                     type="submit"
                     value="Save Change"
-                    className="px-4 sm:px-8 sm:py-2 text-xl text-white rounded-full mt-4 border-0 bg-neutral cursor-pointer"
+                    className="px-4 py-1 sm:px-8 sm:py-2 sm:text-xl text-white rounded-full mt-4 border-0 bg-neutral cursor-pointer"
                   />
                 </div>
               </div>

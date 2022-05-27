@@ -28,6 +28,7 @@ import EditProfile from "./Pages/Dashboard/Profile/EditProfile.jsx";
 import Address from "./Pages/Dashboard/Profile/Address.jsx";
 import Payment from "./Pages/Dashboard/Payment.jsx";
 import Welcome from "./Pages/Shared/Welcome.jsx";
+import Education from "./Pages/Dashboard/Profile/Education.jsx";
 function App() {
   const [theme, setTheme] = useState(true);
   useEffect(() => {
@@ -60,6 +61,7 @@ function App() {
           <Route index element={<MyProfile />} />
           <Route path="edit-profile/:id" element={<EditProfile />} />
           <Route path="address" element={<Address />} />
+          <Route path="education" element={<Education />} />
         </Route>
         <Route
           path="/tool-details/:id"

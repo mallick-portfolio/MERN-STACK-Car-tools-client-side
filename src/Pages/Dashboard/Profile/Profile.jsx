@@ -27,7 +27,7 @@ const Profile = () => {
             <Link className="font-bold" to={"/profile/address"}>Address</Link>
           </li>
           <li>
-            <Link className="font-bold" to={"/profile/address"}>Education</Link>
+            <Link className="font-bold" to={"/profile/education"}>Education</Link>
           </li>
           <li>
             <Link className="font-bold" to={"/profile/address"}>Job Profile</Link>
