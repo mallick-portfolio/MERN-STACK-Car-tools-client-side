@@ -46,7 +46,7 @@ const OrderRow = ({ order, i, refetch }) => {
         ) : (
           <button
             className="px-2 py-1 text-sm text-white rounded-md buser-0 bg-neutral"
-            onClick={() => handleDelete(order?._id, order?.productId)}
+           
           >
              <FontAwesomeIcon icon={faBan} />
           </button>

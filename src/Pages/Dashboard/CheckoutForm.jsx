@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const CheckoutForm = ({ totalPrice, product }) => {
   const navigate = useNavigate();
@@ -85,7 +86,8 @@ const CheckoutForm = ({ totalPrice, product }) => {
         .then((res) => res.json())
         .then((data) => {
           if (data.acknowledged) {
-            navigate("/dashboard");
+            toast('Payment Successfull')
+            navigate("/dashboard/my-orders");
           }
         });
     }
@@ -93,15 +95,15 @@ const CheckoutForm = ({ totalPrice, product }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className="text-accent" onSubmit={handleSubmit}>
         <CardElement
           options={{
             style: {
               base: {
                 fontSize: "16px",
-                color: "#000",
+                color: "#444",
                 "::placeholder": {
-                  color: "#000",
+                  color: "#444",
                 },
               },
               invalid: {

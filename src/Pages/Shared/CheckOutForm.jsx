@@ -80,12 +80,15 @@ const CheckOutForm = ({ tool }) => {
               type={"number"}
               {...register("quantity", {
                 required: "Your selling quantity must be required",
-                validate: (val) => {
-                  if (val >= avilQty) {
-                    return "Order quantity can not be higher than the available quantity";
-                  } else if (val < minQty) {
-                    return "Order quantity can not be Lower than the available quantity";
-                  }
+                max: {
+                  value: avilQty,
+                  message:
+                    "Your Order Quantity is not higher then Available Quantity",
+                },
+                min: {
+                  value: minQty,
+                  message:
+                    "Your Order Quantity is not lower then Minimum order Quantity",
                 },
               })}
               className="input input-bordered w-full text-xl  my-1"
@@ -146,7 +149,7 @@ const CheckOutForm = ({ tool }) => {
               type="submit"
               disabled={!watch("quantity")}
               value="Submit"
-              className={`px-4 py-1 sm:px-12 sm:py-3 bg-neutral text-sm rounded-md border-0  cursor-pointer ${
+              className={`px-4 py-1 sm:px-12 sm:py-3 bg-neutral rounded-md border-0 text-white cursor-pointer ${
                 !watch("quantity")
                   ? "bg-slate-400 cursor-not-allowed"
                   : "bg-neutral"
