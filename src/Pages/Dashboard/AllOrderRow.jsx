@@ -2,7 +2,9 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { toast } from "react-toastify";
-const AllOrderRow = ({ i, order, refetch }) => {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+const AllOrderRow = ({ i, order, refetch, setItem }) => {
   const { register, handleSubmit } = useForm();
   const onSubmit = async (data) => {
     axios
@@ -43,7 +45,13 @@ const AllOrderRow = ({ i, order, refetch }) => {
             />
           </form>
         ) : (
-          <p className="text-neutral text-xl">Unpaid</p>
+          <p className="text-neutral text-xl">Unpaid <label
+          onClick={() => setItem(order)}
+          htmlFor="my-modal-6"
+          class="text-white px-3 py-2 rounded-md border-0 btn-warning cursor-pointer btn-sm mx-2"
+        >
+          <FontAwesomeIcon icon={faTrash} />
+        </label></p>
         )}
       </td>
     </tr>

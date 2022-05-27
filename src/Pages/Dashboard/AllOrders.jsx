@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useQuery } from "react-query";
 import Loading from "../Shared/Loading.jsx";
+import OrderDeleteModal from "../Shared/OrderDeleteModal.jsx";
 import AllOrderRow from "./AllOrderRow.jsx";
 
 const AllOrders = () => {
+  const url = "http://localhost:5000/admin/orders/";
+  const [item, setItem] = useState(null);
   const {
     isLoading,
     data: orders,
@@ -44,10 +47,19 @@ const AllOrders = () => {
               key={order._id}
               i={i}
               order={order}
+              setItem={setItem}
             />
           ))}
         </tbody>
       </table>
+      {item && (
+        <OrderDeleteModal
+          url={url}
+          item={item}
+          setItem={setItem}
+          refetch={refetch}
+        />
+      )}
     </div>
   );
 };

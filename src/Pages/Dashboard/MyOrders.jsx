@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import auth from "../../firebase.init.js";
 import CommonModal from "../Shared/CommonModal.jsx";
 import Loading from "../Shared/Loading.jsx";
+import OrderDeleteModal from "../Shared/OrderDeleteModal.jsx";
 import OrderRow from "./OrderRow.jsx";
 const MyOrders = () => {
   const url = "http://localhost:5000/orders/";
@@ -66,7 +67,7 @@ const MyOrders = () => {
         </tbody>
       </table>
       {item && (
-        <CommonModal
+        <OrderDeleteModal
           url={url}
           item={item}
           setItem={setItem}

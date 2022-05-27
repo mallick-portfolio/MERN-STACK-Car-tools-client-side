@@ -10,8 +10,8 @@ import UserRow from "./UserRow.jsx";
 
 const Users = () => {
   const url = "http://localhost:5000/users/";
-  const [user] = useAuthState(auth);
   const [item, setItem] = useState(null);
+  const [user] = useAuthState(auth);
   const navigate = useNavigate();
   const {
     isLoading,

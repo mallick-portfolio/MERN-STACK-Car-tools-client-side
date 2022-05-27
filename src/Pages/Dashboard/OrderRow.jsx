@@ -6,7 +6,14 @@ const OrderRow = ({ order, i, refetch, setItem }) => {
   return (
     <tr>
       <th>{i + 1}</th>
-      <td>{order?.title}</td>
+      <td>
+        {order?.title.length > 25 ? (
+          <span>{order?.title.slice(0, 25)} ...</span>
+        ) : (
+          order?.title
+        )}
+        ...
+      </td>
       <td>{order?.price}</td>
       <td>{order?.quantity}</td>
       <td>{order?.status}</td>
