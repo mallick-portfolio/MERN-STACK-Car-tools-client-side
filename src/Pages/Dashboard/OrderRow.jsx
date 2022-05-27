@@ -1,24 +1,8 @@
 import React from "react";
-import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBan, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-const OrderRow = ({ order, i, refetch }) => {
-  console.log(order);
-  const handleDelete = async (id, productId) => {
-    console.log(productId);
-    await axios
-      .delete(`http://localhost:5000/orders/${id}`, {
-        method: "DELETE",
-        headers: {
-          productId: `${productId}`,
-        },
-      })
-      .then((res) => {
-        console.log(res);
-        refetch();
-      });
-  };
+const OrderRow = ({ order, i, refetch, setItem }) => {
   return (
     <tr>
       <th>{i + 1}</th>
@@ -37,18 +21,16 @@ const OrderRow = ({ order, i, refetch }) => {
       </td>
       <td>
         {!order.transactionId ? (
-          <button
-            className="px-2 py-1 text-sm text-white rounded-md buser-0 bg-success"
-            onClick={() => handleDelete(order?._id, order?.productId)}
+          <label
+            onClick={() => setItem(order)}
+            htmlFor="my-modal-6"
+            class="text-white px-3 py-2 rounded-md border-0 btn-warning cursor-pointer btn-sm"
           >
-             <FontAwesomeIcon icon={faTrash} />
-          </button>
+            <FontAwesomeIcon icon={faTrash} />
+          </label>
         ) : (
-          <button
-            className="px-2 py-1 text-sm text-white rounded-md buser-0 bg-neutral"
-           
-          >
-             <FontAwesomeIcon icon={faBan} />
+          <button className="px-2 py-1 text-sm text-white rounded-md buser-0 bg-neutral">
+            <FontAwesomeIcon icon={faBan} />
           </button>
         )}
       </td>

@@ -23,7 +23,7 @@ const ManageOrderRow = ({ product, i, refetch, setItem }) => {
 
         <label
           onClick={() => setItem(product)}
-          for="my-modal-6"
+          htmlFor="my-modal-6"
           class="text-white px-3 py-2 rounded-md border-0 btn-warning cursor-pointer btn-sm mx-2"
         >
           <FontAwesomeIcon icon={faTrash} />

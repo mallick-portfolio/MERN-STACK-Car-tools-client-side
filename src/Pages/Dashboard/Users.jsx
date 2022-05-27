@@ -9,7 +9,7 @@ import Loading from "../Shared/Loading.jsx";
 import UserRow from "./UserRow.jsx";
 
 const Users = () => {
-  const url = 'http://localhost:5000/users/';
+  const url = "http://localhost:5000/users/";
   const [user] = useAuthState(auth);
   const [item, setItem] = useState(null);
   const navigate = useNavigate();
@@ -52,11 +52,24 @@ const Users = () => {
         </thead>
         <tbody>
           {users.map((u, i) => (
-            <UserRow setItem={setItem} refetch={refetch} key={u._id} i={i} u={u} />
+            <UserRow
+              setItem={setItem}
+              refetch={refetch}
+              key={u._id}
+              i={i}
+              u={u}
+            />
           ))}
         </tbody>
       </table>
-      <CommonModal url={url} item={item} setItem={setItem} refetch={refetch} />
+      {item && (
+        <CommonModal
+          url={url}
+          item={item}
+          setItem={setItem}
+          refetch={refetch}
+        />
+      )}
     </div>
   );
 };

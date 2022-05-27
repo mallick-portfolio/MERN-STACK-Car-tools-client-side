@@ -11,10 +11,11 @@ const CommonModal = ({ item, refetch, setItem, url }) => {
         method: "DELETE",
       })
       .then((res) => {
+        console.log(res)
         if (res.data.acknowledged) {
+          setItem(null);
           toast("Deleted Successfull");
           refetch();
-          setItem(null);
         }
       });
   };
@@ -40,7 +41,7 @@ const CommonModal = ({ item, refetch, setItem, url }) => {
             </div>
             <div class="">
               <label
-                for="my-modal-6"
+                htmlFor="my-modal-6"
                 class="px-4 py-3 text-sm text-white rounded-md border-0 cursor-pointer bg-primary"
               >
                 Back

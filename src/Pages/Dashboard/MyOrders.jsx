@@ -1,12 +1,15 @@
 import { signOut } from "firebase/auth";
-import React from "react";
+import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useQuery } from "react-query";
 import { useNavigate } from "react-router-dom";
 import auth from "../../firebase.init.js";
+import CommonModal from "../Shared/CommonModal.jsx";
 import Loading from "../Shared/Loading.jsx";
 import OrderRow from "./OrderRow.jsx";
 const MyOrders = () => {
+  const url = "http://localhost:5000/orders/";
+  const [item, setItem] = useState(null);
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
   const {
@@ -52,10 +55,24 @@ const MyOrders = () => {
         </thead>
         <tbody>
           {orders.map((order, i) => (
-            <OrderRow refetch={refetch} key={order._id} i={i} order={order} />
+            <OrderRow
+              setItem={setItem}
+              refetch={refetch}
+              key={order._id}
+              i={i}
+              order={order}
+            />
           ))}
         </tbody>
       </table>
+      {item && (
+        <CommonModal
+          url={url}
+          item={item}
+          setItem={setItem}
+          refetch={refetch}
+        />
+      )}
     </div>
   );
 };
