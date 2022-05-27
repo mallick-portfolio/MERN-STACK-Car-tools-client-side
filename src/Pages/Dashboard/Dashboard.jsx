@@ -26,7 +26,7 @@ const Dashboard = () => {
       </div>
       <div className={`drawer-side rounded-lg hidden `}>
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-        <ul className="menu text-accent p-4 overflow-y-auto w-60 bg-base-300">
+        <ul className="menu text-accent p-4 overflow-y-auto w-60 bg-base-300 ">
           {!admin && (
             <>
               <li>

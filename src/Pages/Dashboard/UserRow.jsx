@@ -2,7 +2,7 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { toast } from "react-toastify";
-const UserRow = ({ u, i, refetch }) => {
+const UserRow = ({ u, i, refetch, setItem }) => {
   const handleAdmin = (email) => {
     console.log(email);
     fetch(`http://localhost:5000/user/admin/${email}`, {
@@ -34,9 +34,13 @@ const UserRow = ({ u, i, refetch }) => {
           </button>
         )}
         {u?.role !== 'admin' && (
-          <button className="px-2 py-1 ml-3 text-sm text-white rounded-md buser-0 bg-neutral">
-            <FontAwesomeIcon icon={faTrash} />
-          </button>
+          <label
+          onClick={() => setItem(u)}
+          for="my-modal-6"
+          class="text-white px-3 py-2 rounded-md border-0 btn-warning cursor-pointer btn-sm mx-2"
+        >
+          <FontAwesomeIcon icon={faTrash} />
+        </label>
         )}
       </td>
     </tr>

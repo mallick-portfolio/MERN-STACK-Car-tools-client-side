@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
+const imageUrl = 'https://i.ibb.co/0McRM9d/user.png'
 const EditProfile = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -45,7 +46,7 @@ const EditProfile = () => {
           <div className="avatar">
             <div className="w-20">
               <img
-                src={updateProfile.image ? updateProfile.image : userImg}
+                src={updateProfile.image ? updateProfile.image : imageUrl}
                 alt=""
                 className="rounded-full"
               />

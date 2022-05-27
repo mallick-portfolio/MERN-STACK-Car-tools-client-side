@@ -9,7 +9,8 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 AOS.init();
 const Footer = () => {
   return (
-    <footer data-aos="fade-up" data-aos-offset="200"  data-aos-duration="500">
+    <footer data-aos="fade-up"
+    data-aos-duration="2000">
       <div className="footer mt-16 p-10 px-16 mx-auto bg-base-200 text-base-content">
         <div>
           <img className="w-40 animate-spin" src={logo} alt="" />

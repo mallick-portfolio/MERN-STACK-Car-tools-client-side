@@ -1,22 +1,51 @@
+import { faWarning } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import axios from "axios";
 import React from "react";
+import { toast } from "react-toastify";
 
-const CommonModal = () => {
+const CommonModal = ({ item, refetch, setItem, url }) => {
+  const handleDelete = async (id) => {
+    await axios
+      .delete(`${url}${id}`, {
+        method: "DELETE",
+      })
+      .then((res) => {
+        if (res.data.acknowledged) {
+          toast("Deleted Successfull");
+          refetch();
+          setItem(null);
+        }
+      });
+  };
+
   return (
     <>
-      <input type="checkbox" id="my-modal-6" className="modal-toggle" />
-      <div className="modal modal-bottom sm:modal-middle">
-        <div className="modal-box">
-          <h3 className="font-bold text-lg">
-            Congratulations random Interner user!
-          </h3>
-          <p className="py-4">
-            You've been selected for a chance to get one year of subscription to
-            use Wikipedia for free!
+      <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+      <div class="modal bg-transparent modal-bottom w-30 sm:modal-middle">
+        <div class="modal-box">
+          <h3 class="text-3xl mb-2">Are You Sure Want To Delete !</h3>
+          <p className="mb-4 text-xl text-red-500">
+           <FontAwesomeIcon icon={faWarning} /> After you delete an item, it's permanently deleted. Items
+            can't be undeleted.
           </p>
-          <div className="modal-action">
-            <label for="my-modal-6" className="btn">
-              Yay!
-            </label>
+          <div className="flex justify-between items-center">
+            <div>
+              <button
+                onClick={() => handleDelete(item?._id)}
+                className="px-3 py-2 text-sm text-white rounded-md border-0 bg-[#ff136f]"
+              >
+                Confirm
+              </button>
+            </div>
+            <div class="">
+              <label
+                for="my-modal-6"
+                class="px-4 py-3 text-sm text-white rounded-md border-0 cursor-pointer bg-primary"
+              >
+                Back
+              </label>
+            </div>
           </div>
         </div>
       </div>

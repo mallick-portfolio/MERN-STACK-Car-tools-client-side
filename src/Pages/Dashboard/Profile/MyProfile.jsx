@@ -34,7 +34,7 @@ const MyProfile = () => {
               <img
                 src={userProfile.image ? userProfile.image : userImg}
                 alt=""
-                className="rounded-full"
+                className="rounded-full border-neutral border-2 p-1"
               />
             </div>
           </div>

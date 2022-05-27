@@ -3,7 +3,6 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, NavLink } from "react-router-dom";
 import auth from "../../firebase.init.js";
 import { signOut } from "firebase/auth";
-import userImg from "../../assets/images/user.png";
 import Commonbtn from "./Commonbtn.jsx";
 import useAdmin from "../../hooks/useAdmin.js";
 import Loading from "./Loading.jsx";
@@ -11,6 +10,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 AOS.init();
 const Navbar = ({ setTheme, theme }) => {
+  const imageUrl = 'https://i.ibb.co/0McRM9d/user.png'
   const [showProfile, setShowProfile] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const logout = () => {
@@ -105,8 +105,9 @@ const Navbar = ({ setTheme, theme }) => {
             <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
                 <img
+                className="rounded-full ring ring-primary ring-offset-secondary ring-offset-2"
                   onClick={() => setShowProfile(!showProfile)}
-                  src={user ? user?.photoURL : userImg}
+                  src={user.photoURL ? user?.photoURL : imageUrl}
                   alt=""
                 />
               </div>
@@ -119,8 +120,8 @@ const Navbar = ({ setTheme, theme }) => {
               <div className="mb-4">
                 <div className="text-center">
                   <div className="avatar">
-                    <div className="w-16 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                      <img src={user ? user?.photoURL : userImg} alt="" />
+                    <div className="w-16 rounded-full ring ring-primary ring-offset-secondary ring-offset-2">
+                      <img src={user.photoURL ? user?.photoURL : imageUrl} alt="" />
                     </div>
                   </div>
                   <p className="text-xl my-2">{user?.displayName}</p>

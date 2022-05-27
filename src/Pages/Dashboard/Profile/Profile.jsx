@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
 const Profile = () => {
+  
   return (
     <div className="drawer drawer-mobile lg:px-16 pb-8 text-accent mx-auto">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />

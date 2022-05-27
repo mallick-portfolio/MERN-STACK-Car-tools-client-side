@@ -24,17 +24,17 @@ const Register = () => {
   const navigate = useNavigate();
   const [token] = useToken(user || guser);
   useEffect(() => {
-    if (error || gerror || upError) {
-      toast("Your Register Failed. Please try again");
-      return navigate("/signup");
-    }
-  }, [error, gerror, navigate, upError]);
-  useEffect(() => {
     if (token) {
       toast("Registation Successfully");
       navigate("/");
     }
   }, [navigate, token]);
+
+  if (error || gerror || upError) {
+    toast("Your Register Failed. Please try again");
+    return navigate("/signup");
+  }
+
   if (loading || gloading || updating) {
     return <Loading />;
   }
@@ -134,7 +134,7 @@ const Register = () => {
           </div>
           <div className="mb-1 text-center">
             <p>
-              Already Have an Account
+              Already Have an Account{" "}
               <Link to={"/login"} className="text-neutral cursor-pointer">
                 Login Now
               </Link>
