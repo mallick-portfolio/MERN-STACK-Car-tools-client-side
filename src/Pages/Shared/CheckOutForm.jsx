@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 const CheckOutForm = ({ tool }) => {
   const [user] = useAuthState(auth);
   const { minQty, avilQty, name, _id, singlePrice } = tool;
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -17,18 +17,18 @@ const CheckOutForm = ({ tool }) => {
   } = useForm();
   const onSubmit = (data, e) => {
     const { avilQty, ...res } = data;
-    
+
     axios
       .post("http://localhost:5000/order", {
         ...res,
         title: name,
         productId: _id,
-        price: singlePrice
+        price: singlePrice,
       })
       .then((res) => {
-        if(res.data.acknowledged){
-          toast('Order Successfully.')
-          navigate('/dashboard/my-orders')
+        if (res.data.acknowledged) {
+          toast("Order Successfully.");
+          navigate("/dashboard/my-orders");
         }
       });
   };
@@ -77,7 +77,7 @@ const CheckOutForm = ({ tool }) => {
               </span>
             </label>
             <input
-            type={'number'}
+              type={"number"}
               {...register("quantity", {
                 required: "Your selling quantity must be required",
                 validate: (val) => {
@@ -141,12 +141,12 @@ const CheckOutForm = ({ tool }) => {
             <p className="text-red-500">{errors.phone.message}</p>
           )}
 
-          <div className=" absolute bottom-10 right-5">
+          <div className="">
             <input
               type="submit"
               disabled={!watch("quantity")}
               value="Submit"
-              className={`px-4 py-1 sm:px-12 sm:py-3 text-sm text-white rounded-md border-0  cursor-pointer ${
+              className={`px-4 py-1 sm:px-12 sm:py-3 bg-neutral text-sm rounded-md border-0  cursor-pointer ${
                 !watch("quantity")
                   ? "bg-slate-400 cursor-not-allowed"
                   : "bg-neutral"

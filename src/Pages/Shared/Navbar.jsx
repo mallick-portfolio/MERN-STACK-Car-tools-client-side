@@ -7,6 +7,9 @@ import userImg from "../../assets/images/user.png";
 import Commonbtn from "./Commonbtn.jsx";
 import useAdmin from "../../hooks/useAdmin.js";
 import Loading from "./Loading.jsx";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 const Navbar = ({ setTheme, theme }) => {
   const [showProfile, setShowProfile] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
@@ -44,7 +47,10 @@ const Navbar = ({ setTheme, theme }) => {
     </>
   );
   return (
-    <section className="navbar bg-base-100 lg:px-12 md:px-6 px-2 mx-auto">
+    <section data-aos="fade-down"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000" className="navbar bg-base-100 lg:px-12 md:px-6 px-2 mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <label

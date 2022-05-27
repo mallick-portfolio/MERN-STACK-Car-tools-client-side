@@ -7,7 +7,7 @@ const ChecoutToolDetail = ({ tool }) => {
     <div className="basis-1/2  mx-2 my-3 sm:my-0">
       <div className="card rounded-lg w-full bg-base-300 shadow-xl">
         <figure className="px-10 pt-10 ">
-          <img src={image} alt="Shoes" className="rounded-lg h-96" />
+          <img src={image} alt="Shoes" className="rounded-lg h-auto" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{name}</h2>

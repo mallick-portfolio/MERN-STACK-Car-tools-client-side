@@ -1,5 +1,9 @@
 import React from "react";
 import SummaryCard from "./SummaryCard.jsx";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 const Summary = () => {
   const summarys = [
     {
@@ -32,7 +36,11 @@ const Summary = () => {
     },
   ];
   return (
-    <div className="lg:px-16 py-16 bg-base-100 mx-auto text-accent">
+    <div data-aos="fade-up"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="500"
+    data-aos-easing="ease-in-out" className="lg:px-16 py-16 bg-base-100 mx-auto text-accent">
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:px-16 px-4 mx-auto">
         {summarys.map((summary) => (
           <SummaryCard key={summary._id} summary={summary} />

@@ -1,14 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Commonbtn from "../Shared/Commonbtn.jsx";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 const SingleTool = ({ tool }) => {
   const { name, image, minQty, des, avilQty, singlePrice, _id } = tool;
   return (
-    <div className="card mx-2 sm:px-4 bg-base-300 shadow-xl text-accent">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="2000"
+      className="card mx-2 sm:px-4 bg-base-300 shadow-xl text-accent"
+    >
       <figure>
-        <img className="h-[300px] w-[300px] my-btn" src={image} alt="Shoes" />
+        <img className="h-[250px] w-[250px] my-btn" src={image} alt="Shoes" />
       </figure>
-      <div className="card-body py-0 pb-4">
+      <div className="card-body py-0 pb-6">
         <h2 className="card-title">{name}</h2>
         <p className="text-xl font-bold">${singlePrice}</p>
         <div className="card-actions py-0 my-0">

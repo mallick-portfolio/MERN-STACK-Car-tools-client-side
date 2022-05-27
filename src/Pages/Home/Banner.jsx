@@ -56,7 +56,7 @@ const Banner = () => {
     },
   ];
   return (
-    <div className="relative">
+    <div className="relative" >
       <Swiper
         autoplay={{ delay: 5000 }}
         navigation={{

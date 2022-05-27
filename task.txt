@@ -117,25 +117,19 @@ We are a manufacturer. We are looking for a front-end web developer to build a w
 
 
 
-
-
 ### Optional but highly encouraged to do:
+
+3. If possible, on the `Manage All Orders` implement a button to show all pending orders. Another button to show all shipped orders, all unpaid orders. Add search to find an order by email address of a user. The list of orders could be sorted by the newest one at first. Consider implementing pagination on this page.
 Make sure you have done everything on the main part and bonus. Deploy and test everything. After that, you may try optional things.
 
 8. Add something extra of your own. This will help you in the future.
 1. Add animation in the home page and other places.
 1. We encourage you to use `axios` and implement interceptors to inject authorization headers in one place other than adding an authorization header for every call separately.------------
-2. Send a confirmation email after placing an order. Even if the email doesn't get sent or goes to the spam folder. Also, it will be nice to send an email once an order is shipped to the user. 
-3. If possible, on the `Manage All Orders` implement a button to show all pending orders. Another button to show all shipped orders, all unpaid orders. Add search to find an order by email address of a user. The list of orders could be sorted by the newest one at first. Consider implementing pagination on this page.
-4. Display order status on the `My Orders` page. So that a user can see the status of the order whether it is pending, or shipped. ++++++
 
+4. Display order status on the `My Orders` page. So that a user can see the status of the order whether it is pending, or shipped. ------
 5. Please Use icons whenever applicable and use fonts (google fonts)------
 6. Make the footer a little more realistic ---------
 7. Optimize your images --------
-
-
-
-
 10. If possible, replace the default react favicon and give an icon for your website. ---------------
 
 11. Display the latest (newest) 6 reviews on the home page. The most recent reviews added to your website.---------
