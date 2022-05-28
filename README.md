@@ -1,6 +1,6 @@
-# Getting Started MERN stack Takus cart parts solution
+# Getting Started MERN STACK  cart parts Website
 
-# Luxuary Car
+# Takus Car
  [Click Here to see live website](https://garden-tools-8a9de.web.app/).
 
 ## What technology we use
