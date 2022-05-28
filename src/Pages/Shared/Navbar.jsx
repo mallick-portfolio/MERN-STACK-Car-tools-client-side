@@ -31,12 +31,6 @@ const Navbar = ({ setTheme, theme }) => {
         <NavLink to={"/shop"}>Shop</NavLink>
       </li>
       <li>
-        <a>About</a>
-      </li>
-      <li>
-        <a>About</a>
-      </li>
-      <li>
         <NavLink to={"/blogs"}>Blogs</NavLink>
       </li>
       {!user && (
@@ -105,7 +99,7 @@ const Navbar = ({ setTheme, theme }) => {
             <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
                 <img
-                className="rounded-full ring ring-primary ring-offset-secondary ring-offset-2"
+                className="rounded-full online"
                   onClick={() => setShowProfile(!showProfile)}
                   src={user.photoURL ? user?.photoURL : imageUrl}
                   alt=""
@@ -120,7 +114,7 @@ const Navbar = ({ setTheme, theme }) => {
               <div className="mb-4">
                 <div className="text-center">
                   <div className="avatar">
-                    <div className="w-16 rounded-full ring ring-primary ring-offset-secondary ring-offset-2">
+                    <div className="w-16 online">
                       <img src={user.photoURL ? user?.photoURL : imageUrl} alt="" />
                     </div>
                   </div>
