@@ -6,11 +6,23 @@ import { signOut } from "firebase/auth";
 import Commonbtn from "./Commonbtn.jsx";
 import useAdmin from "../../hooks/useAdmin.js";
 import Loading from "./Loading.jsx";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faComment,
+  faDashboard,
+  faList,
+  faListAlt,
+  faPlus,
+  faSignOut,
+  faStar,
+  faTasks,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 AOS.init();
 const Navbar = ({ setTheme, theme }) => {
-  const imageUrl = 'https://i.ibb.co/0McRM9d/user.png'
+  const imageUrl = "https://i.ibb.co/0McRM9d/user.png";
   const [showProfile, setShowProfile] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const logout = () => {
@@ -41,10 +53,13 @@ const Navbar = ({ setTheme, theme }) => {
     </>
   );
   return (
-    <section data-aos="fade-down"
-    data-aos-offset="200"
-    data-aos-delay="50"
-    data-aos-duration="1000" className="navbar bg-base-100 lg:px-12 md:px-6 px-2 mx-auto">
+    <section
+      data-aos="fade-down"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      className="navbar bg-base-100 lg:px-12 md:px-6 px-2 mx-auto"
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <label
@@ -99,7 +114,7 @@ const Navbar = ({ setTheme, theme }) => {
             <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
                 <img
-                className="rounded-full online"
+                  className="rounded-full online"
                   onClick={() => setShowProfile(!showProfile)}
                   src={user.photoURL ? user?.photoURL : imageUrl}
                   alt=""
@@ -115,7 +130,10 @@ const Navbar = ({ setTheme, theme }) => {
                 <div className="text-center">
                   <div className="avatar">
                     <div className="w-16 online">
-                      <img src={user.photoURL ? user?.photoURL : imageUrl} alt="" />
+                      <img
+                        src={user.photoURL ? user?.photoURL : imageUrl}
+                        alt=""
+                      />
                     </div>
                   </div>
                   <p className="text-xl my-2">{user?.displayName}</p>
@@ -126,37 +144,53 @@ const Navbar = ({ setTheme, theme }) => {
               </div>
               <ul tabIndex="0">
                 <li>
-                  <Link to={"/dashboard"} className="justify-between">
+                  <Link to={"/dashboard"}>
+                    <FontAwesomeIcon className="text-xl" icon={faDashboard} />
                     Dashboard
-                    <span className="badge">New</span>
                   </Link>
                 </li>
                 {!admin && (
                   <>
                     <li>
-                      <Link to={"/dashboard/my-orders"}>My Orders</Link>
+                      <Link to={"/dashboard/my-orders"}><FontAwesomeIcon className="text-xl" icon={faListAlt} />{" "} My Orders</Link>
                     </li>
                     <li>
-                      <Link to={"/dashboard/add-review"}>Add Review</Link>
+                      <Link to={"/dashboard/add-review"}>
+                        <FontAwesomeIcon className="text-xl" icon={faStar} />{" "}
+                        Add Review
+                      </Link>
                     </li>
                     <li>
-                      <Link to={"/dashboard/my-reviews"}>My Reviews</Link>
+                      <Link to={"/dashboard/my-reviews"}>
+                        <FontAwesomeIcon className="text-xl" icon={faComment} />{" "}
+                        My Reviews
+                      </Link>
                     </li>
                   </>
                 )}
                 {admin && (
                   <>
                     <li>
-                      <Link to={"/dashboard/users"}>Users</Link>
+                      <Link to={"/dashboard/users"}>
+                        <FontAwesomeIcon className="text-xl" icon={faUser} />
+                        Users
+                      </Link>
                     </li>
                     <li>
-                      <Link to={"/dashboard/orders"}>Orders</Link>
+                      <Link to={"/dashboard/orders"}>
+                        <FontAwesomeIcon className="text-xl" icon={faList} />
+                        Orders
+                      </Link>
                     </li>
                     <li>
-                      <Link to={"/dashboard/add-product"}>Add Product</Link>
+                      <Link to={"/dashboard/add-product"}>
+                        <FontAwesomeIcon className="text-xl" icon={faPlus} />
+                        Add Product
+                      </Link>
                     </li>
                     <li>
                       <Link to={"/dashboard/manage-products"}>
+                        <FontAwesomeIcon className="text-xl" icon={faTasks} />{" "}
                         Manage Products
                       </Link>
                     </li>
@@ -190,7 +224,14 @@ const Navbar = ({ setTheme, theme }) => {
                   </label>
                 </li>
                 <li>
-                  <button onClick={logout}>Logout</button>
+                  <button onClick={logout}>
+                    {" "}
+                    <FontAwesomeIcon
+                      className="text-xl"
+                      icon={faSignOut}
+                    />{" "}
+                    Logout
+                  </button>
                 </li>
               </ul>
             </div>
