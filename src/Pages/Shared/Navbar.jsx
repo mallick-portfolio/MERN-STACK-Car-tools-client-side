@@ -15,6 +15,7 @@ import {
   faList,
   faListAlt,
   faPlus,
+  faSignIn,
   faSignOut,
   faStar,
   faTasks,
@@ -47,7 +48,7 @@ const Navbar = ({ setTheme, theme }) => {
       </li>
       {!user && (
         <li>
-          <NavLink to={"/login"}>Login</NavLink>
+          <NavLink to={"/login"}><FontAwesomeIcon className="text-xl" icon={faSignIn} />Login</NavLink>
         </li>
       )}
     </>
