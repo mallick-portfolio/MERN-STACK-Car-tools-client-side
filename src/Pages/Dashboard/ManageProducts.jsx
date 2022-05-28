@@ -5,14 +5,14 @@ import Loading from "../Shared/Loading.jsx";
 import ManageOrderRow from "./ManageOrderRow.jsx";
 
 const ManageProducts = () => {
-  const url = 'http://localhost:5000/admin/product/'
+  const url = 'https://car-parts98789.herokuapp.com/admin/product/'
   const [item, setItem] = useState(null);
   const {
     isLoading,
     data: products,
     refetch,
   } = useQuery("manageProducts", () =>
-    fetch(`http://localhost:5000/admin/products`, {
+    fetch(`https://car-parts98789.herokuapp.com/admin/products`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

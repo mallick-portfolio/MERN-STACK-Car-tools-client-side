@@ -5,14 +5,14 @@ import OrderDeleteModal from "../Shared/OrderDeleteModal.jsx";
 import AllOrderRow from "./AllOrderRow.jsx";
 
 const AllOrders = () => {
-  const url = "http://localhost:5000/admin/orders/";
+  const url = "https://car-parts98789.herokuapp.com/admin/orders/";
   const [item, setItem] = useState(null);
   const {
     isLoading,
     data: orders,
     refetch,
   } = useQuery("allOrder", () =>
-    fetch(`http://localhost:5000/orders`, {
+    fetch(`https://car-parts98789.herokuapp.com/orders`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

@@ -19,7 +19,7 @@ const CheckOutForm = ({ tool }) => {
     const { avilQty, ...res } = data;
 
     axios
-      .post("http://localhost:5000/order", {
+      .post("https://car-parts98789.herokuapp.com/order", {
         ...res,
         title: name,
         productId: _id,

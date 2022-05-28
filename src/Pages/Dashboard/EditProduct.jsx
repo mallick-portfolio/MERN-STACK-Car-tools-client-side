@@ -10,7 +10,7 @@ const EditProduct = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { isLoading, data: product } = useQuery("repoData", () =>
-    fetch(`http://localhost:5000/admin/product/${id}`).then((res) => res.json())
+    fetch(`https://car-parts98789.herokuapp.com/admin/product/${id}`).then((res) => res.json())
   );
   if (isLoading) {
     return <Loading />;
@@ -30,7 +30,7 @@ const EditProduct = () => {
         .then((result) => {
           if (result.success) {
             const image = result.data.url;
-            fetch(`http://localhost:5000/admin/product/${id}`, {
+            fetch(`https://car-parts98789.herokuapp.com/admin/product/${id}`, {
               method: "PUT",
               headers: {
                 "content-type": "application/json",
@@ -51,7 +51,7 @@ const EditProduct = () => {
         });
     } else if (image === undefined) {
       const { image, ...newData } = data;
-      fetch(`http://localhost:5000/admin/product/${id}`, {
+      fetch(`https://car-parts98789.herokuapp.com/admin/product/${id}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",

@@ -15,7 +15,7 @@ const CheckoutForm = ({ totalPrice, product }) => {
   const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/create-payment-intent", {
+    fetch("https://car-parts98789.herokuapp.com/create-payment-intent", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -75,7 +75,7 @@ const CheckoutForm = ({ totalPrice, product }) => {
         transactionId: paymentIntent.id,
       };
 
-      fetch(`http://localhost:5000/orders/payment/${product?._id}`, {
+      fetch(`https://car-parts98789.herokuapp.com/orders/payment/${product?._id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",
