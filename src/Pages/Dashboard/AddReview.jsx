@@ -42,14 +42,15 @@ const AddReview = () => {
         <p className="text-xl mb-4">Give your over all rating</p>
         <textarea
           {...register("des", {
+            minLength: {
+              value: 80,
+              message: "Your comment minimum length is 80",
+            },
             maxLength: {
               value: 250,
               message: "Your comment maximum length is 250",
             },
-            minLength: {
-              value: 80,
-              message: "Your comment minimum length is 250",
-            },
+            
           })}
           name="des"
           required
