@@ -14,7 +14,7 @@ const Reviews = () => {
     isLoading,
     data: reviews,
   } = useQuery("repoData", () =>
-    fetch("http://localhost:5000/reviews").then((res) => res.json())
+    fetch("https://car-parts98789.herokuapp.com/reviews").then((res) => res.json())
   );
   if (isLoading) {
     return <Loading />;

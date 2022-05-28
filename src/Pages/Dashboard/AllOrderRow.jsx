@@ -8,7 +8,7 @@ const AllOrderRow = ({ i, order, refetch, setItem }) => {
   const { register, handleSubmit } = useForm();
   const onSubmit = async (data) => {
     axios
-      .put(`http://localhost:5000/admin/orders/${order._id}`, {
+      .put(`https://car-parts98789.herokuapp.com/admin/orders/${order._id}`, {
         status: data.status,
       })
       .then((res) => {

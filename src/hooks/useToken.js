@@ -12,7 +12,7 @@ const useToken = (user) => {
       image: user?.user?.photoURL,
     };
     if (email) {
-      fetch(`http://localhost:5000/user/${email}`, {
+      fetch(`https://car-parts98789.herokuapp.com/user/${email}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",
