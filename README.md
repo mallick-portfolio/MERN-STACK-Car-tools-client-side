@@ -1,7 +1,6 @@
 # Getting Started MERN STACK  cart parts Website
 
-# Takus Car
- [Click Here to see live website](https://garden-tools-8a9de.web.app/).
+# Takus Car [Click Here to see live website](https://garden-tools-8a9de.web.app/).
 
 ## What technology we use
 * This project is created with React JS, Node JS, MongoDb, Express JS
