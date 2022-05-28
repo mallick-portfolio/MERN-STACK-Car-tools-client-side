@@ -5,7 +5,7 @@ import { useQuery } from "react-query";
 import Loading from "../Shared/Loading.jsx";
 const Shop = () => {
   const { isLoading, data: tools } = useQuery("shop", () =>
-    fetch("https://car-parts98789.herokuapp.com/tools").then((res) => res.json())
+    fetch("http://localhost:5000/tools").then((res) => res.json())
   );
   if (isLoading) {
     return <Loading />;

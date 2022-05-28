@@ -11,7 +11,7 @@ const ToolsDetails = () => {
   useEffect(() => {
     const loadTool = async () => {
       await axios
-        .get(`https://car-parts98789.herokuapp.com/tools/${id}`)
+        .get(`http://localhost:5000/tools/${id}`)
         .then((res) => setTool(res.data));
     };
     loadTool();

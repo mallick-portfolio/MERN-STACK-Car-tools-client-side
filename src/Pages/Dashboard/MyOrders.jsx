@@ -8,7 +8,7 @@ import Loading from "../Shared/Loading.jsx";
 import OrderDeleteModal from "../Shared/OrderDeleteModal.jsx";
 import OrderRow from "./OrderRow.jsx";
 const MyOrders = () => {
-  const url = "https://car-parts98789.herokuapp.com/orders/";
+  const url = "http://localhost:5000/orders/";
   const [item, setItem] = useState(null);
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ const MyOrders = () => {
     data: orders,
     refetch,
   } = useQuery("getOrder", () =>
-    fetch(`https://car-parts98789.herokuapp.com/orders/${user?.email}`, {
+    fetch(`http://localhost:5000/orders/${user?.email}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

@@ -19,7 +19,7 @@ const AddReview = () => {
 
   const onSubmit = async (data) => {
     axios
-      .post("https://car-parts98789.herokuapp.com/reviews", {
+      .post("http://localhost:5000/reviews", {
         des: data.des,
         img: user?.photoURL,
         name: user?.displayName,

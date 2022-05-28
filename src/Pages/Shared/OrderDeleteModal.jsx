@@ -6,21 +6,14 @@ import { toast } from "react-toastify";
 
 const OrderDeleteModal = ({ item, refetch, setItem, url }) => {
   const handleDelete = async (id) => {
-    await axios
-      .delete(`${url}${id}`, {
-        method: "DELETE",
-        headers: { 
-          productid: item?.productId
+    await axios.delete(`${url}${id}`, { data: { productid: item?.productId } }).then((res) => {
+      console.log(res);
+      if (res.data.acknowledged) {
+        setItem(null);
+        toast("Deleted Successfull");
+        refetch();
       }
-      })
-      .then((res) => {
-        console.log(res)
-        if (res.data.acknowledged) {
-          setItem(null);
-          toast("Deleted Successfull");
-          refetch();
-        }
-      });
+    });
   };
 
   return (
@@ -30,8 +23,8 @@ const OrderDeleteModal = ({ item, refetch, setItem, url }) => {
         <div class="modal-box">
           <h3 class="text-3xl mb-2">Are You Sure Want To Delete !</h3>
           <p className="mb-4 text-xl text-red-500">
-           <FontAwesomeIcon icon={faWarning} /> After you delete an item, it's permanently deleted. Items
-            can't be undeleted.
+            <FontAwesomeIcon icon={faWarning} /> After you delete an item, it's
+            permanently deleted. Items can't be undeleted.
           </p>
           <div className="flex justify-between items-center">
             <div>

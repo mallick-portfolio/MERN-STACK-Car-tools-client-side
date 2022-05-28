@@ -9,7 +9,7 @@ import Loading from "../Shared/Loading.jsx";
 import UserRow from "./UserRow.jsx";
 
 const Users = () => {
-  const url = "https://car-parts98789.herokuapp.com/users/";
+  const url = "http://localhost:5000/users/";
   const [item, setItem] = useState(null);
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const Users = () => {
     data: users,
     refetch,
   } = useQuery("getUsers", () =>
-    fetch(`https://car-parts98789.herokuapp.com/users/${user?.email}`, {
+    fetch(`http://localhost:5000/users/${user?.email}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

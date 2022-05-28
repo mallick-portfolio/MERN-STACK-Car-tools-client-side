@@ -9,7 +9,7 @@ import Loading from "../../Shared/Loading.jsx";
 const MyProfile = () => {
   const [user, loading] = useAuthState(auth);
   const { isLoading, data: userProfile } = useQuery("userProfile", () =>
-    fetch(`https://car-parts98789.herokuapp.com/profile/user/${user?.email}`, {
+    fetch(`http://localhost:5000/profile/user/${user?.email}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

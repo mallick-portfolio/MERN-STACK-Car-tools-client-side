@@ -17,7 +17,7 @@ const EditProfile = () => {
     formState: { errors },
   } = useForm();
   const { isLoading, data: updateProfile } = useQuery("updateProfile", () =>
-    fetch(`https://car-parts98789.herokuapp.com/profile/users/${id}`).then((res) => res.json())
+    fetch(`http://localhost:5000/profile/users/${id}`).then((res) => res.json())
   );
   if (isLoading) {
     return <Loading />;
@@ -26,7 +26,7 @@ const EditProfile = () => {
   const onSubmit = async (data) => {
     console.log(data);
     await axios
-      .put(`https://car-parts98789.herokuapp.com/profile/user/${id}`, data)
+      .put(`http://localhost:5000/profile/user/${id}`, data)
       .then((res) => {
         if (res.data.acknowledged) {
           toast("Updated Successfull");

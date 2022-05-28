@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 const ReviewRow = ({ review, i, refetch }) => {
   const handleDelete = async (id) => {
-    await axios.delete(`https://car-parts98789.herokuapp.com/reviews/${id}`).then((res) => {
+    await axios.delete(`http://localhost:5000/reviews/${id}`).then((res) => {
       if (res.data) {
         toast("Delete Successfully");
       }

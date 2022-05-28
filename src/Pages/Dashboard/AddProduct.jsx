@@ -20,7 +20,7 @@ const AddProduct = () => {
       .then((result) => {
         if (result.success) {
           const image = result.data.url;
-          fetch("https://car-parts98789.herokuapp.com/admin/product", {
+          fetch("http://localhost:5000/admin/product", {
             method: "POST",
             headers: {
               "content-type": "application/json",

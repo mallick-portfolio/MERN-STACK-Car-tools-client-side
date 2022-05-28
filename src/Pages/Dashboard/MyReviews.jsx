@@ -14,7 +14,7 @@ const MyReviews = () => {
     data: rating,
     refetch,
   } = useQuery("getRating", () =>
-    fetch(`https://car-parts98789.herokuapp.com/reviews/${user?.email}`, {
+    fetch(`http://localhost:5000/reviews/${user?.email}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
