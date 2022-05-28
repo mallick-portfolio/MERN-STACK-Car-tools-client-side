@@ -118,7 +118,7 @@ We are a manufacturer. We are looking for a front-end web developer to build a w
 
 
 ### Optional but highly encouraged to do:
-8. Add something extra of your own. This will help you in the future.
+8. Add something extra of your own. This will help you in the future.----
 
 3. If possible, on the `Manage All Orders` implement a button to show all pending orders. Another button to show all shipped orders, all unpaid orders. Add search to find an order by email address of a user. The list of orders could be sorted by the newest one at first. Consider implementing pagination on this page.
 Make sure you have done everything on the main part and bonus. Deploy and test everything. After that, you may try optional things.
